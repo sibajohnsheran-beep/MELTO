@@ -1,0 +1,1140 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap");
+
+/* ==========================================
+   MELTO HERO - REFERENCE ALIGNMENT
+========================================== */
+
+.melto-hero {
+  --flavour-glow: #ffc7df;
+  --flavour-accent: #e91e72;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 48% 35%,
+      #ffd2e8 0%,
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      #ffc6e1 0%,
+      #ffacd3 48%,
+      #ffbfdd 100%
+    );
+
+  color: #64301e;
+}
+
+/* ==========================================
+   TOP CREAM WAVE
+========================================== */
+
+.melto-top-cream-wave {
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 94px;
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   BACKGROUND SCENERY
+========================================== */
+
+.melto-hero-scenery {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* SOFT CLOUDS */
+
+.melto-hero-cloud {
+  position: absolute;
+  width: 112px;
+  height: 31px;
+
+  border-radius: 70px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #fff1fb
+  );
+
+  box-shadow:
+    inset 0 4px 7px #ffffff,
+    0 8px 15px #da81ac25;
+}
+
+.melto-hero-cloud::before,
+.melto-hero-cloud::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.melto-hero-cloud::before {
+  width: 57px;
+  height: 57px;
+  left: 14px;
+  bottom: 9px;
+}
+
+.melto-hero-cloud::after {
+  width: 66px;
+  height: 66px;
+  right: 12px;
+  bottom: 4px;
+}
+
+.cloud-one {
+  top: 21%;
+  left: 29%;
+  transform: scale(0.73);
+}
+
+.cloud-two {
+  top: 24%;
+  right: 17%;
+  transform: scale(1.02);
+}
+
+.cloud-three {
+  top: 55%;
+  left: -2%;
+  transform: scale(0.75);
+}
+
+.cloud-four {
+  top: 12%;
+  right: 0;
+  transform: scale(0.58);
+}
+
+/* ==========================================
+   CORNER TREES
+========================================== */
+
+.melto-scenery-tree {
+  position: absolute;
+  width: 135px;
+  height: 166px;
+
+  filter: drop-shadow(0 9px 10px #8c518032);
+}
+
+.tree-left {
+  left: -52px;
+  bottom: 24%;
+  transform: scale(0.78);
+}
+
+.tree-right {
+  right: -49px;
+  bottom: 28%;
+  transform: scale(0.82);
+}
+
+.tree-trunk {
+  position: absolute;
+  bottom: 0;
+  left: 54px;
+
+  width: 24px;
+  height: 92px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    90deg,
+    #8c5129,
+    #bf8347,
+    #6d381e
+  );
+}
+
+.tree-leaf {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 32% 23%,
+    #d6f778 0%,
+    #a6d950 22%,
+    #65b52f 63%,
+    #388c27 100%
+  );
+
+  box-shadow:
+    inset -9px -10px 15px #36762c50,
+    inset 5px 5px 10px #ffffff65,
+    0 5px 9px #4f943140;
+}
+
+.leaf-one {
+  top: 0;
+  left: 29px;
+}
+
+.leaf-two {
+  top: 32px;
+  left: 2px;
+}
+
+.leaf-three {
+  top: 32px;
+  right: 2px;
+}
+
+.leaf-four {
+  top: 60px;
+  left: 14px;
+}
+
+.leaf-five {
+  top: 60px;
+  right: 14px;
+}
+
+/* ==========================================
+   CANDY SPRINKLES
+========================================== */
+
+.melto-sprinkle {
+  position: absolute;
+
+  width: 10px;
+  height: 24px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    inset -2px -3px 3px #00000018,
+    inset 2px 3px 3px #ffffff80;
+}
+
+.sprinkle-one {
+  top: 42%;
+  left: 3%;
+  background: #ffca38;
+  transform: rotate(-40deg);
+}
+
+.sprinkle-two {
+  top: 66%;
+  left: 40%;
+  background: #aa75e1;
+  transform: rotate(43deg);
+}
+
+.sprinkle-three {
+  top: 31%;
+  right: 4%;
+  background: #76d6e8;
+  transform: rotate(-35deg);
+}
+
+.sprinkle-four {
+  top: 68%;
+  right: 5%;
+  background: #ff69a3;
+  transform: rotate(25deg);
+}
+
+.sprinkle-five {
+  bottom: 24%;
+  left: 13%;
+  background: #ffc63b;
+  transform: rotate(58deg);
+}
+
+/* SPARKLES */
+
+.melto-sky-sparkle {
+  position: absolute;
+
+  color: #ffffff;
+  font-size: 20px;
+
+  text-shadow:
+    0 0 9px #ffffff,
+    0 0 18px #ffffffb0;
+
+  animation: meltoTwinkle 3s ease-in-out infinite;
+}
+
+.sky-sparkle-one {
+  top: 24%;
+  left: 5%;
+}
+
+.sky-sparkle-two {
+  top: 34%;
+  right: 11%;
+  animation-delay: 0.5s;
+}
+
+.sky-sparkle-three {
+  bottom: 32%;
+  left: 32%;
+  animation-delay: 1s;
+}
+
+.sky-sparkle-four {
+  top: 18%;
+  left: 64%;
+  animation-delay: 1.5s;
+}
+
+/* ==========================================
+   HERO MAIN CONTAINER
+========================================== */
+
+.melto-hero-container {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding:
+    45px
+    clamp(30px, 6.2vw, 105px)
+    0;
+}
+
+.melto-hero-stage {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 36fr)
+    minmax(0, 31fr)
+    minmax(0, 33fr);
+
+  align-items: center;
+
+  min-height: 475px;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.melto-hero-content {
+  position: relative;
+  z-index: 8;
+
+  width: 100%;
+  max-width: 520px;
+
+  padding: 10px 0 24px;
+}
+
+/* BADGE */
+
+.melto-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 19px;
+
+  border: 1.5px solid #ffffff;
+  border-radius: 40px;
+
+  background: #fff2f8e8;
+  color: #a92154;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+
+  box-shadow:
+    0 6px 14px #a44f7520,
+    inset 0 2px 5px #ffffff;
+}
+
+.melto-hero-badge span {
+  font-size: 17px;
+}
+
+/* ==========================================
+   SOLID ROUNDED 3D-STYLE TITLE
+========================================== */
+
+.melto-hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 19px 0 15px;
+
+  font-family:
+    "Fredoka",
+    "Arial Rounded MT Bold",
+    "Poppins",
+    sans-serif;
+
+  font-size: clamp(66px, 5.3vw, 90px);
+  font-weight: 700;
+  line-height: 0.97;
+  letter-spacing: -3px;
+}
+
+/* CHOCOLATE WORD */
+
+.melto-hero-title span {
+  display: block;
+
+  color: #76321f;
+  -webkit-text-fill-color: #76321f;
+  -webkit-text-stroke: 0;
+
+  text-shadow:
+    0 -2px 0 #cb896f,
+    1px 2px 0 #f2b29c,
+    2px 5px 0 #572318,
+    4px 8px 0 #a44e5040,
+    6px 12px 13px #8a405050;
+
+  white-space: nowrap;
+}
+
+/* PINK WORD */
+
+.melto-hero-title strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #ef116e;
+  -webkit-text-fill-color: #ef116e;
+  -webkit-text-stroke: 0;
+
+  font-size: 1.02em;
+  font-weight: 700;
+
+  text-shadow:
+    0 -2px 0 #ff93bc,
+    1px 2px 0 #ffb2ce,
+    2px 5px 0 #b90057,
+    4px 8px 0 #a60d584d,
+    6px 13px 13px #9d3b7050;
+
+  white-space: nowrap;
+}
+
+/* DESCRIPTION */
+
+.melto-hero-description {
+  max-width: 390px;
+
+  margin: 25px 0 23px;
+
+  color: #653d48;
+
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   HERO BUTTONS
+========================================== */
+
+.melto-hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* PRIMARY */
+
+.melto-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 51px;
+  padding: 13px 20px;
+
+  border: 1px solid #ffffff80;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    180deg,
+    #ff569b,
+    #ee1473 58%,
+    #d90062
+  );
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 0 #c30b60,
+    0 10px 17px #d1267042,
+    inset 0 2px 4px #ffffff75;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.melto-primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* SECONDARY */
+
+.melto-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 51px;
+  padding: 11px 18px;
+
+  border: 1.5px solid #f1a1c3;
+  border-radius: 50px;
+
+  background: #fff9fbf2;
+  color: #633020;
+
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+
+  box-shadow:
+    0 5px 13px #a74a7620,
+    inset 0 2px 4px #ffffff;
+
+  transition: transform 0.2s ease;
+}
+
+.melto-secondary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.melto-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  border: 2px solid #e91e72;
+  border-radius: 50%;
+
+  color: #e91e72;
+}
+
+/* ==========================================
+   CENTRE MASCOT - SCALE CORRECTION
+========================================== */
+
+.melto-mascot-scene {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 475px;
+  min-width: 0;
+}
+
+.melto-mascot-glow {
+  position: absolute;
+
+  width: 95%;
+  height: 77%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #ffe9f6b5 0%,
+    var(--flavour-glow) 33%,
+    transparent 72%
+  );
+
+  filter: blur(23px);
+  opacity: 0.45;
+}
+
+/* FIX: MASCOT IS NO LONGER OVER-ENLARGED */
+
+.melto-mascot-floating {
+  position: relative;
+  z-index: 3;
+
+  width: min(100%, 310px);
+  flex-shrink: 0;
+
+  filter: drop-shadow(
+    0 16px 13px #a44a7545
+  );
+
+  animation:
+    meltoMascotFloat
+    4.5s
+    ease-in-out
+    infinite;
+}
+
+.melto-hero-mascot {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.melto-mascot-shadow {
+  position: absolute;
+
+  bottom: 4%;
+  left: 50%;
+
+  width: 48%;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #8f3f6650;
+  filter: blur(13px);
+
+  transform: translateX(-50%);
+
+  animation:
+    meltoMascotShadow
+    4.5s
+    ease-in-out
+    infinite;
+}
+
+/* ==========================================
+   DECORATIONS AROUND MASCOT
+========================================== */
+
+.melto-decor {
+  position: absolute;
+  z-index: 4;
+
+  font-size: 32px;
+  line-height: 1;
+
+  pointer-events: none;
+
+  animation:
+    meltoDecorFloat
+    3.5s
+    ease-in-out
+    infinite;
+}
+
+.decor-one {
+  top: 15%;
+  left: 5%;
+  color: #ffc02b;
+}
+
+.decor-two {
+  top: 24%;
+  right: 3%;
+  color: #ff60a9;
+  animation-delay: 0.4s;
+}
+
+.decor-three {
+  bottom: 20%;
+  left: 4%;
+  color: #ad72e5;
+  animation-delay: 0.8s;
+}
+
+.decor-four {
+  bottom: 25%;
+  right: 4%;
+  color: #ed498b;
+  font-size: 22px;
+  animation-delay: 1.2s;
+}
+
+/* ==========================================
+   RIGHT ICE CREAM SHOP
+========================================== */
+
+.melto-shop-scene {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  height: 455px;
+  min-width: 0;
+}
+
+.melto-shop-glow {
+  position: absolute;
+
+  right: 3%;
+  bottom: 12%;
+
+  width: 95%;
+  height: 65%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #ffecf6b0 0%,
+    #ff90c43c 48%,
+    transparent 75%
+  );
+
+  filter: blur(17px);
+}
+
+.melto-shop-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: min(110%, 435px);
+  max-width: none;
+  max-height: 420px;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 14px 14px #a7507c35
+  );
+
+  animation:
+    meltoShopAppear
+    0.9s
+    ease-out
+    both;
+}
+
+/* ==========================================
+   BOTTOM WAVES + FLAVOUR ZONE
+========================================== */
+
+.melto-flavour-zone {
+  position: relative;
+  z-index: 7;
+  isolation: isolate;
+
+  margin-top: -12px;
+
+  padding:
+    80px
+    0
+    18px;
+}
+
+.melto-flavour-zone::before {
+  content: "";
+
+  position: absolute;
+  z-index: -2;
+
+  top: 60px;
+  bottom: -120px;
+  left: 50%;
+
+  width: 100vw;
+
+  transform: translateX(-50%);
+
+  background: #fff4f8;
+}
+
+.melto-bottom-cream-wave {
+  position: absolute;
+  z-index: -1;
+
+  top: -34px;
+  left: 50%;
+
+  width: 100vw;
+  height: 130px;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes meltoMascotFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(1deg);
+  }
+}
+
+@keyframes meltoMascotShadow {
+  0%,
+  100% {
+    transform:
+      translateX(-50%) scale(1);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform:
+      translateX(-50%) scale(0.87);
+    opacity: 0.32;
+  }
+}
+
+@keyframes meltoDecorFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes meltoTwinkle {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes meltoShopAppear {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1280px) {
+  .melto-hero-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .melto-hero-title {
+    font-size: clamp(57px, 5.5vw, 76px);
+  }
+
+  .melto-mascot-floating {
+    width: min(100%, 285px);
+  }
+
+  .melto-shop-image {
+    width: min(108%, 400px);
+  }
+
+  .melto-hero-description {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   TABLET - RETAIN ALL MAIN ELEMENTS
+========================================== */
+
+@media (max-width: 980px) {
+  .melto-hero-container {
+    padding-top: 70px;
+  }
+
+  .melto-hero-stage {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    min-height: auto;
+    row-gap: 0;
+  }
+
+  .melto-hero-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .melto-mascot-scene {
+    grid-column: 2;
+    grid-row: 1;
+
+    height: 420px;
+  }
+
+  .melto-mascot-floating {
+    width: min(100%, 275px);
+  }
+
+  .melto-shop-scene {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    height: 270px;
+  }
+
+  .melto-shop-image {
+    width: min(55%, 345px);
+    max-height: 260px;
+  }
+
+  .melto-hero-title {
+    font-size: clamp(49px, 6.1vw, 68px);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .melto-top-cream-wave {
+    height: 66px;
+  }
+
+  .melto-hero-container {
+    padding: 58px 5% 0;
+  }
+
+  .melto-hero-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .melto-hero-content {
+    width: 100%;
+    max-width: 440px;
+
+    text-align: center;
+    padding: 10px 0 0;
+  }
+
+  .melto-hero-badge {
+    font-size: 10px;
+    padding: 9px 15px;
+  }
+
+  .melto-hero-title {
+    align-items: center;
+
+    margin: 20px 0 15px;
+
+    font-size: clamp(43px, 10.5vw, 63px);
+    letter-spacing: -2px;
+  }
+
+  .melto-hero-description {
+    max-width: 350px;
+
+    margin: 20px auto;
+
+    font-size: 14px;
+  }
+
+  .melto-hero-buttons {
+    justify-content: center;
+  }
+
+  .melto-primary-btn,
+  .melto-secondary-btn {
+    min-height: 47px;
+    padding: 10px 15px;
+    font-size: 11px;
+  }
+
+  /* MOBILE MASCOT */
+
+  .melto-mascot-scene {
+    width: 100%;
+    height: 335px;
+    margin-top: 12px;
+  }
+
+  .melto-mascot-floating {
+    width: min(72vw, 215px);
+  }
+
+  .melto-mascot-glow {
+    width: 245px;
+    height: 265px;
+  }
+
+  .melto-decor {
+    font-size: 25px;
+  }
+
+  .decor-four {
+    font-size: 19px;
+  }
+
+  /* MOBILE SHOP */
+
+  .melto-shop-scene {
+    width: 100%;
+    height: 250px;
+    margin-top: -10px;
+  }
+
+  .melto-shop-image {
+    width: min(90%, 310px);
+    max-height: 240px;
+  }
+
+  /* TREES */
+
+  .tree-left {
+    left: -53px;
+    bottom: 35%;
+    transform: scale(0.43);
+  }
+
+  .tree-right {
+    right: -50px;
+    bottom: 24%;
+    transform: scale(0.46);
+  }
+
+  /* CLOUDS */
+
+  .cloud-one {
+    left: -7%;
+    top: 19%;
+    transform: scale(0.5);
+  }
+
+  .cloud-two {
+    right: -7%;
+    top: 34%;
+    transform: scale(0.55);
+  }
+
+  .cloud-three {
+    left: -10%;
+    top: 60%;
+    transform: scale(0.45);
+  }
+
+  /* BOTTOM TRANSITION */
+
+  .melto-flavour-zone {
+    margin-top: 0;
+    padding-top: 65px;
+  }
+
+  .melto-bottom-cream-wave {
+    top: -25px;
+    height: 95px;
+  }
+
+  .melto-flavour-zone::before {
+    top: 42px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 390px) {
+  .melto-hero-title {
+    font-size: 41px;
+  }
+
+  .melto-primary-btn,
+  .melto-secondary-btn {
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+
+  .melto-mascot-scene {
+    height: 315px;
+  }
+
+  .melto-shop-scene {
+    height: 235px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-mascot-floating,
+  .melto-mascot-shadow,
+  .melto-decor,
+  .melto-sky-sparkle,
+  .melto-shop-image {
+    animation: none;
+  }
+
+  .melto-primary-btn,
+  .melto-secondary-btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,465 @@
+
+/* ========================================
+   MELTO ADMIN DASHBOARD
+======================================== */
+
+.melto-admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+/* WELCOME BANNER */
+
+.melto-admin-welcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  min-height: 218px;
+  padding: 35px 40px;
+
+  border-radius: 23px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    120deg,
+    #ffe0ec 0%,
+    #ffd1e4 55%,
+    #eadbff 100%
+  );
+}
+
+.melto-admin-welcome > div:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+.melto-admin-welcome-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #d82371;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+}
+
+.melto-admin-welcome h1 {
+  margin: 15px 0 9px;
+  color: #623729;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(25px, 3vw, 35px);
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.melto-admin-welcome p {
+  margin: 0 0 17px;
+  color: #93647b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.melto-admin-demo-label {
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 30px;
+  background: #fff8fbd9;
+  color: #bc457c;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.melto-admin-welcome-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 175px;
+  flex-shrink: 0;
+}
+
+.melto-admin-welcome-visual img {
+  max-width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 12px #aa60813d);
+}
+
+/* SECTION HEADINGS */
+
+.melto-admin-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.melto-admin-section-heading h2 {
+  margin: 0 0 5px;
+  color: #34283a;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.melto-admin-section-heading p {
+  margin: 0;
+  color: #9a8a9d;
+  font-size: 12px;
+}
+
+.melto-admin-data-tag {
+  padding: 7px 11px;
+  border: 1px solid #ffd0e2;
+  border-radius: 30px;
+  color: #d42b76;
+  background: #ffedf4;
+  font-size: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* STAT CARDS */
+
+.melto-admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.melto-admin-stat-card {
+  min-width: 0;
+  padding: 22px;
+
+  border: 1px solid #f0eaf1;
+  border-radius: 20px;
+
+  background: white;
+  box-shadow: 0 6px 22px #6d4d7010;
+}
+
+.melto-admin-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.melto-admin-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 49px;
+  height: 49px;
+  border-radius: 15px;
+}
+
+.melto-admin-stat-icon.pink {
+  color: #e91e72;
+  background: #ffe6f0;
+}
+
+.melto-admin-stat-icon.purple {
+  color: #8d62dd;
+  background: #eee7ff;
+}
+
+.melto-admin-stat-icon.orange {
+  color: #d68d38;
+  background: #fff2da;
+}
+
+.melto-admin-stat-icon.mint {
+  color: #30a480;
+  background: #e2f8ef;
+}
+
+.melto-admin-stat-decoration {
+  color: #c9becd;
+}
+
+.melto-admin-stat-title {
+  display: block;
+  margin-bottom: 9px;
+  color: #968a9c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.melto-admin-stat-value {
+  display: block;
+  color: #34283a;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(20px, 2vw, 27px);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.melto-admin-stat-card small {
+  display: block;
+  margin-top: 10px;
+  color: #ad9eb0;
+  font-size: 10px;
+}
+
+/* RECENT ORDERS */
+
+.melto-admin-orders-card {
+  border: 1px solid #eee7f0;
+  border-radius: 21px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 6px 22px #6d4d7010;
+}
+
+.melto-admin-orders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px;
+}
+
+.melto-admin-orders-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 7px;
+
+  color: #34283a;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.melto-admin-orders-header h2 svg {
+  color: #e91e72;
+}
+
+.melto-admin-orders-header p {
+  margin: 0;
+  color: #9d90a0;
+  font-size: 12px;
+}
+
+.melto-admin-orders-header button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 11px 14px;
+  border: 1px solid #f1c9da;
+  border-radius: 11px;
+
+  background: #fff0f6;
+  color: #d82974;
+  font-size: 12px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.melto-admin-orders-header button:hover {
+  background: #ffe0ec;
+}
+
+.melto-admin-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.melto-admin-orders-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.melto-admin-orders-table th {
+  padding: 16px 20px;
+  background: #faf7fb;
+  color: #93859a;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.melto-admin-orders-table td {
+  padding: 19px 20px;
+  border-top: 1px solid #f0ebf2;
+  color: #716779;
+  font-size: 12px;
+}
+
+.melto-admin-orders-table td strong {
+  color: #34283a;
+}
+
+.melto-admin-orders-table .melto-admin-order-id {
+  color: #d92971;
+}
+
+.melto-admin-order-status {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 75px;
+
+  padding: 7px 10px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.melto-admin-order-status.status-new {
+  background: #ffe5ef;
+  color: #d82971;
+}
+
+.melto-admin-order-status.status-preparing {
+  background: #fff1d9;
+  color: #af731e;
+}
+
+.melto-admin-order-status.status-completed {
+  background: #def7eb;
+  color: #228b66;
+}
+
+/* QUICK ACCESS */
+
+.melto-admin-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.melto-admin-quick-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 23px;
+  min-height: 175px;
+
+  border: 1px solid #eee5f0;
+  border-radius: 19px;
+
+  background: #ffffff;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-admin-quick-card:hover {
+  border-color: #efafd0;
+  transform: translateY(-3px);
+}
+
+.melto-admin-quick-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+
+  background: #ffe5ef;
+  color: #d92971;
+}
+
+.melto-admin-quick-card strong {
+  color: #34283a;
+  font-size: 15px;
+}
+
+.melto-admin-quick-card small {
+  color: #9b8ea0;
+  font-size: 12px;
+}
+
+.melto-admin-quick-card > svg {
+  align-self: flex-end;
+  color: #d92971;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .melto-admin-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .melto-admin-welcome {
+    padding: 27px 22px;
+    min-height: 190px;
+  }
+
+  .melto-admin-welcome-visual {
+    width: 100px;
+    height: 130px;
+  }
+
+  .melto-admin-welcome-visual img {
+    max-height: 145px;
+  }
+
+  .melto-admin-welcome h1 {
+    font-size: 24px;
+  }
+
+  .melto-admin-stats-grid,
+  .melto-admin-quick-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .melto-admin-stat-card {
+    padding: 19px;
+  }
+
+  .melto-admin-stat-top {
+    margin-bottom: 13px;
+  }
+
+  .melto-admin-orders-header {
+    padding: 20px 15px;
+  }
+
+  .melto-admin-orders-header h2 {
+    font-size: 16px;
+  }
+
+  .melto-admin-orders-header button {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  .melto-admin-welcome-visual {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-admin-quick-card {
+    transition: none;
+  }
+
+  .melto-admin-quick-card:hover {
+    transform: none;
+  }
+}

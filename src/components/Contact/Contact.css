@@ -1,0 +1,653 @@
+
+/* ========================================
+   MELTO - CONTACT SECTION
+======================================== */
+
+.melto-contact {
+  position: relative;
+  overflow: hidden;
+
+  padding: 105px 5% 95px;
+
+  background:
+    radial-gradient(
+      circle at 10% 25%,
+      #ffe1ed,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      #e9ddff,
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #fff1f5 0%,
+      #fffaf6 100%
+    );
+}
+
+.melto-contact-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.melto-contact-heading {
+  max-width: 690px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.melto-contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #e91e72;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+}
+
+.melto-contact-heading h2 {
+  margin: 17px 0;
+
+  color: #653525;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(37px, 4.7vw, 63px);
+  font-weight: 900;
+
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.melto-contact-heading h2 span {
+  color: #e91e72;
+}
+
+.melto-contact-heading p {
+  max-width: 570px;
+  margin: 0 auto;
+
+  color: #987084;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* ========================================
+   TWO COLUMN LAYOUT
+======================================== */
+
+.melto-contact-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: start;
+  gap: 35px;
+}
+
+/* ========================================
+   LEFT VISUAL
+======================================== */
+
+.melto-contact-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 370px;
+
+  border: 1px solid #f8dbe7;
+  border-radius: 32px;
+
+  background: linear-gradient(
+    140deg,
+    #ffe0ec,
+    #f6d9f7,
+    #ffe9f0
+  );
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.melto-contact-glow {
+  position: absolute;
+  z-index: -1;
+
+  width: 310px;
+  height: 310px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #ffffffa6,
+    #ffbadc80 55%,
+    transparent
+  );
+
+  filter: blur(13px);
+}
+
+.melto-contact-mascot {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 240px;
+  max-width: 65%;
+  height: 320px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 14px 15px #aa61803b
+  );
+
+  animation: meltoContactFloat 4s
+    ease-in-out infinite;
+}
+
+@keyframes meltoContactFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+/* FLOATING DECORATIONS */
+
+.melto-contact-star {
+  position: absolute;
+  z-index: 3;
+
+  font-size: 32px;
+  pointer-events: none;
+}
+
+.star-one {
+  top: 55px;
+  left: 13%;
+  color: #f8b923;
+}
+
+.star-two {
+  top: 70px;
+  right: 12%;
+  color: #a581dd;
+}
+
+.star-three {
+  bottom: 72px;
+  left: 12%;
+  color: #ed649a;
+}
+
+/* HAPPY MOMENTS BADGE */
+
+.melto-contact-happy-badge {
+  position: absolute;
+  z-index: 5;
+
+  bottom: 25px;
+  right: 23px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 16px;
+
+  border: 1px solid white;
+  border-radius: 35px;
+
+  background: #fffcffeb;
+  color: #ce3476;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  box-shadow: 0 8px 20px #c47f9b30;
+}
+
+/* ========================================
+   LEFT CONTACT INFO
+======================================== */
+
+.melto-contact-info-heading {
+  padding: 28px 5px 17px;
+}
+
+.melto-contact-info-heading h3 {
+  margin: 0 0 11px;
+
+  color: #653525;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.melto-contact-info-heading p {
+  margin: 0;
+
+  color: #967183;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.melto-contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.melto-contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  padding: 18px;
+
+  border: 1px solid #f7e0e9;
+  border-radius: 20px;
+
+  background: #ffffffba;
+}
+
+.melto-contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background: #ffe2ed;
+  color: #e91e72;
+}
+
+.melto-contact-info-item h4 {
+  margin: 3px 0 7px;
+
+  color: #653525;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.melto-contact-info-item p {
+  margin: 0;
+
+  color: #9b7587;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+/* ========================================
+   CONTACT FORM CARD
+======================================== */
+
+.melto-contact-form-card {
+  padding: 35px;
+
+  border: 1px solid #f5dce6;
+  border-radius: 30px;
+
+  background: #fffdfcf5;
+
+  box-shadow: 0 17px 50px #b96b8c1c;
+}
+
+.melto-contact-form-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.melto-contact-form-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+
+  border-radius: 19px;
+
+  background: linear-gradient(
+    135deg,
+    #ffd0e3,
+    #ffe9f2
+  );
+
+  color: #e91e72;
+}
+
+.melto-contact-form-header h3 {
+  margin: 0 0 7px;
+
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.melto-contact-form-header p {
+  margin: 0;
+
+  color: #a17c8d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ========================================
+   FORM INPUTS
+======================================== */
+
+.melto-contact-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.melto-contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.melto-contact-field label {
+  color: #653525;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.melto-contact-field label span {
+  color: #e91e72;
+}
+
+.melto-contact-field input,
+.melto-contact-field select,
+.melto-contact-field textarea {
+  width: 100%;
+
+  padding: 15px 17px;
+
+  border: 1.5px solid #f3dce6;
+  border-radius: 15px;
+
+  background: #fff8fa;
+  color: #653525;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.melto-contact-field textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.melto-contact-field input:focus,
+.melto-contact-field select:focus,
+.melto-contact-field textarea:focus {
+  border-color: #ed4b91;
+
+  box-shadow: 0 0 0 4px #ffdaeb80;
+}
+
+.melto-contact-field input::placeholder,
+.melto-contact-field textarea::placeholder {
+  color: #bb99a9;
+}
+
+.melto-contact-field > small {
+  align-self: flex-end;
+  color: #b28b9c;
+  font-size: 11px;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.melto-contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 54px;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: linear-gradient(
+    180deg,
+    #ff559a,
+    #e40f69
+  );
+
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+
+  box-shadow: 0 8px 20px #e91e7230;
+  transition: 0.25s ease;
+}
+
+.melto-contact-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px #e91e7244;
+}
+
+/* SUCCESS / DEMO STATUS */
+
+.melto-contact-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #c8e7ce;
+  border-radius: 15px;
+
+  background: #f0fff2;
+  color: #32794b;
+}
+
+.melto-contact-success svg {
+  flex-shrink: 0;
+}
+
+.melto-contact-success p {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.melto-contact-form-note {
+  margin: -5px 0 0;
+
+  color: #b28d9d;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ========================================
+   BOTTOM BANNER
+======================================== */
+
+.melto-contact-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 50px;
+  padding: 25px;
+
+  border: 1px solid #f7dce7;
+  border-radius: 24px;
+
+  background: #ffffffb5;
+}
+
+.melto-contact-bottom > svg {
+  color: #f4b128;
+}
+
+.melto-contact-bottom > span {
+  color: #82516d;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.melto-contact-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-left: auto;
+
+  color: #e91e72;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1050px) {
+  .melto-contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .melto-contact-info {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .melto-contact-form-card {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .melto-contact {
+    padding: 75px 5%;
+  }
+
+  .melto-contact-heading {
+    margin-bottom: 32px;
+  }
+
+  .melto-contact-heading h2 {
+    font-size: clamp(35px, 9vw, 48px);
+    letter-spacing: -1px;
+  }
+
+  .melto-contact-heading p {
+    font-size: 14px;
+  }
+
+  .melto-contact-layout {
+    gap: 22px;
+  }
+
+  .melto-contact-visual {
+    height: 300px;
+    border-radius: 24px;
+  }
+
+  .melto-contact-mascot {
+    width: 195px;
+    height: 260px;
+  }
+
+  .melto-contact-happy-badge {
+    bottom: 15px;
+    right: 12px;
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .melto-contact-info-heading h3 {
+    font-size: 20px;
+  }
+
+  .melto-contact-form-card {
+    padding: 23px 19px;
+    border-radius: 24px;
+  }
+
+  .melto-contact-form-header h3 {
+    font-size: 18px;
+  }
+
+  .melto-contact-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .melto-contact-bottom a {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-contact-mascot {
+    animation: none;
+  }
+
+  .melto-contact-submit {
+    transition: none;
+  }
+}

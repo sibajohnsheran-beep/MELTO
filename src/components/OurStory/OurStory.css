@@ -1,0 +1,427 @@
+
+/* ========================================
+   MELTO – OUR STORY
+======================================== */
+
+.melto-story {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 5%;
+
+  background: linear-gradient(
+    145deg,
+    #fff5ed 0%,
+    #fff1f5 48%,
+    #fce5ef 100%
+  );
+}
+
+.melto-story-container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+  gap: 70px;
+}
+
+/* ========================================
+   LEFT VISUAL AREA
+======================================== */
+
+.melto-story-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 540px;
+
+  border-radius: 38px;
+
+  background: linear-gradient(
+    140deg,
+    #ffe1ed,
+    #fbd0e4 55%,
+    #ead6ff
+  );
+
+  box-shadow: 0 20px 55px #ba7b9920;
+
+  isolation: isolate;
+}
+
+.melto-story-glow {
+  position: absolute;
+  z-index: -1;
+
+  width: 75%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #ffffffdf,
+    #ffffff20 65%,
+    transparent
+  );
+
+  filter: blur(15px);
+}
+
+.melto-story-image-wrap {
+  position: relative;
+  z-index: 2;
+
+  width: 110%;
+  max-width: 610px;
+}
+
+.melto-story-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 20px 18px #b8658a35
+  );
+
+  animation: meltoStoryFloat 5s ease-in-out infinite;
+}
+
+@keyframes meltoStoryFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* FLOATING CARD */
+
+.melto-story-floating-card {
+  position: absolute;
+  z-index: 5;
+
+  left: 18px;
+  bottom: 38px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 13px 18px;
+
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+
+  background: #fffaf9ee;
+
+  box-shadow: 0 12px 25px #a95d8029;
+}
+
+.melto-story-floating-card > span {
+  font-size: 35px;
+}
+
+.melto-story-floating-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.melto-story-floating-card strong {
+  color: #653525;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.melto-story-floating-card small {
+  color: #d92971;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* HEART BADGE */
+
+.melto-story-love-badge {
+  position: absolute;
+  z-index: 5;
+
+  top: 40px;
+  right: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 57px;
+  height: 57px;
+
+  border-radius: 50%;
+
+  background: #fff8fb;
+  color: #e91e72;
+
+  box-shadow: 0 10px 25px #cc6f992a;
+}
+
+/* DECORATIVE SPARKLES */
+
+.melto-story-sparkle {
+  position: absolute;
+  z-index: 3;
+
+  font-size: 36px;
+  pointer-events: none;
+}
+
+.sparkle-1 {
+  top: 75px;
+  left: 35px;
+  color: #ffc329;
+}
+
+.sparkle-2 {
+  right: 22px;
+  bottom: 100px;
+  color: #9876d8;
+}
+
+.sparkle-3 {
+  left: 30%;
+  top: 40px;
+  color: #e95c99;
+  font-size: 26px;
+}
+
+/* ========================================
+   RIGHT CONTENT
+======================================== */
+
+.melto-story-content {
+  min-width: 0;
+}
+
+.melto-story-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #e91e72;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+}
+
+.melto-story-content h2 {
+  margin: 20px 0 24px;
+
+  color: #653525;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900;
+
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.melto-story-content h2 span {
+  color: #e91e72;
+}
+
+.melto-story-description {
+  max-width: 570px;
+  margin: 0 0 17px;
+
+  color: #916879;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+/* ========================================
+   STORY FEATURES
+======================================== */
+
+.melto-story-features {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  margin: 34px 0;
+}
+
+.melto-story-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.melto-story-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+
+  border-radius: 17px;
+
+  background: #ffe2ec;
+  color: #e91e72;
+}
+
+.melto-story-feature-text h3 {
+  margin: 3px 0 6px;
+
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.melto-story-feature-text p {
+  margin: 0;
+
+  color: #987687;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+/* ========================================
+   STORY BUTTON
+======================================== */
+
+.melto-story-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  min-height: 53px;
+  padding: 14px 25px;
+
+  border-radius: 40px;
+
+  background: linear-gradient(
+    180deg,
+    #ff559a,
+    #e40f69
+  );
+
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+
+  box-shadow: 0 8px 20px #e91e7233;
+  transition: 0.25s ease;
+}
+
+.melto-story-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px #e91e7244;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1050px) {
+  .melto-story-container {
+    gap: 35px;
+  }
+
+  .melto-story-visual {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 850px) {
+  .melto-story-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .melto-story-visual {
+    min-height: 440px;
+  }
+
+  .melto-story-content {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 600px) {
+  .melto-story {
+    padding: 75px 5%;
+  }
+
+  .melto-story-visual {
+    min-height: 320px;
+    border-radius: 27px;
+  }
+
+  .melto-story-image-wrap {
+    width: 100%;
+  }
+
+  .melto-story-floating-card {
+    left: 12px;
+    bottom: 17px;
+    padding: 10px 12px;
+  }
+
+  .melto-story-floating-card > span {
+    font-size: 27px;
+  }
+
+  .melto-story-love-badge {
+    top: 19px;
+    right: 18px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .melto-story-content h2 {
+    font-size: clamp(34px, 8vw, 45px);
+    letter-spacing: -1px;
+  }
+
+  .melto-story-description {
+    font-size: 14px;
+  }
+
+  .melto-story-features {
+    gap: 20px;
+  }
+
+  .melto-story-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-story-image {
+    animation: none;
+  }
+
+  .melto-story-button {
+    transition: none;
+  }
+}

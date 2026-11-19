@@ -1,0 +1,561 @@
+
+/* ========================================
+   MELTO - CART DRAWER
+======================================== */
+
+/* BACKDROP */
+
+.melto-cart-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+
+  display: flex;
+  justify-content: flex-end;
+
+  background: rgba(50, 22, 45, 0.48);
+  backdrop-filter: blur(6px);
+
+  animation: meltoCartFadeIn 0.3s ease;
+}
+
+/* CART PANEL */
+
+.melto-cart-drawer {
+  display: flex;
+  flex-direction: column;
+
+  width: min(460px, 100%);
+  height: 100vh;
+  height: 100dvh;
+
+  background: #fff9fb;
+  border-radius: 28px 0 0 28px;
+
+  box-shadow: -15px 0 60px rgba(61, 24, 47, 0.2);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  animation: meltoCartSlideIn 0.4s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* HEADER */
+
+.melto-cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 27px 29px;
+
+  border-bottom: 1px solid #f6dce6;
+}
+
+.melto-cart-header-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.melto-cart-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 16px;
+
+  background: #ffe2ee;
+  color: #e91e72;
+}
+
+.melto-cart-header h2 {
+  margin: 0;
+
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.melto-cart-header p {
+  margin: 4px 0 0;
+
+  color: #a27588;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* CLOSE BUTTON */
+
+.melto-cart-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffecf3;
+  color: #653525;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.melto-cart-close:hover {
+  background: #ffd5e6;
+  color: #e91e72;
+
+  transform: rotate(90deg);
+}
+
+/* ========================================
+   EMPTY CART DESIGN
+======================================== */
+
+.melto-cart-empty {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* ICE CREAM ILLUSTRATION */
+
+.melto-cart-illustration {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  height: 220px;
+
+  margin-bottom: 24px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      #ffffff,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #ffe5ef,
+      #f7cfec
+    );
+
+  box-shadow:
+    inset 0 0 30px #ffffff80,
+    0 15px 35px #e9a9c245;
+}
+
+.melto-cart-icecream {
+  font-size: 112px;
+
+  filter: drop-shadow(
+    0 12px 8px rgba(120, 64, 74, 0.2)
+  );
+
+  animation: meltoCartFloat 3.5s
+    ease-in-out infinite;
+}
+
+/* FLOATING DECORATIONS */
+
+.melto-cart-decoration {
+  position: absolute;
+  font-size: 30px;
+}
+
+.decoration-one {
+  top: 24px;
+  left: 18px;
+  color: #f9b521;
+}
+
+.decoration-two {
+  top: 39px;
+  right: 16px;
+  color: #f26c9e;
+}
+
+.decoration-three {
+  bottom: 30px;
+  right: 25px;
+  color: #a783e5;
+}
+
+/* EMPTY CART CONTENT */
+
+.melto-cart-empty h3 {
+  margin: 0 0 14px;
+
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+.melto-cart-empty p {
+  max-width: 310px;
+
+  margin: 0 0 28px;
+
+  color: #947184;
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.8;
+}
+
+/* EXPLORE FLAVOURS BUTTON */
+
+.melto-cart-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 15px 27px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    180deg,
+    #ff559a,
+    #e40f69
+  );
+
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+
+  box-shadow: 0 8px 22px #e91e7233;
+
+  transition: 0.25s ease;
+}
+
+.melto-cart-explore-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px #e91e7244;
+}
+
+/* ========================================
+   CART FOOTER
+======================================== */
+
+.melto-cart-footer {
+  padding: 23px 29px;
+
+  background: #fff1f6;
+  border-top: 1px solid #f8dce7;
+
+  text-align: center;
+}
+
+.melto-cart-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #a04e74;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.melto-cart-footer-note svg {
+  color: #f2b01e;
+}
+
+.melto-cart-footer p {
+  margin: 14px 0 0;
+
+  color: #bc95a5;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes meltoCartFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes meltoCartSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes meltoCartFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 520px) {
+  .melto-cart-drawer {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .melto-cart-header {
+    padding: 20px;
+  }
+
+  .melto-cart-empty {
+    padding: 25px 20px;
+  }
+
+  .melto-cart-illustration {
+    width: 190px;
+    height: 190px;
+  }
+
+  .melto-cart-icecream {
+    font-size: 95px;
+  }
+
+  .melto-cart-empty h3 {
+    font-size: 21px;
+  }
+
+  .melto-cart-footer {
+    padding: 20px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-cart-backdrop,
+  .melto-cart-drawer,
+  .melto-cart-icecream {
+    animation: none;
+  }
+
+  .melto-cart-close,
+  .melto-cart-explore-btn {
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   MELTO - CART PRODUCT ITEMS
+========================================= */
+
+.melto-cart-items {
+  flex: 1;
+  padding: 22px;
+  overflow-y: auto;
+}
+
+.melto-cart-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f5dfe8;
+}
+
+.melto-cart-item-visual {
+  width: 100px;
+  height: 105px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #ffeaf1;
+}
+
+.melto-cart-item-visual img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.melto-cart-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.melto-cart-item-info h3 {
+  margin: 3px 0 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #653525;
+}
+
+.melto-cart-item-info > p {
+  margin: 0;
+  color: #e91e72;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.melto-cart-item-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.melto-cart-quantity {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border: 1px solid #f5d3df;
+  border-radius: 25px;
+  background: white;
+}
+
+.melto-cart-quantity button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  background: #ffe6ef;
+  color: #d92971;
+}
+
+.melto-cart-quantity button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.melto-cart-quantity span {
+  min-width: 16px;
+  text-align: center;
+  color: #653525;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.melto-cart-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  border-radius: 50%;
+  background: #fff0f3;
+  color: #b85b78;
+}
+
+.melto-cart-remove:hover {
+  color: #e91e72;
+  background: #ffe0e9;
+}
+
+/* CART CHECKOUT FOOTER */
+
+.melto-cart-checkout {
+  padding: 22px 28px 25px;
+  border-top: 1px solid #f6dce6;
+  background: #fff1f6;
+}
+
+.melto-cart-subtotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #653525;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.melto-cart-subtotal strong {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.melto-cart-checkout > p {
+  color: #a77e91;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 12px 0 18px;
+}
+
+.melto-cart-checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 50px;
+  background: #e91e72;
+  color: white;
+  font-weight: 900;
+}
+
+.melto-cart-checkout-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.melto-cart-continue {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #9f5779;
+  font-weight: 800;
+}

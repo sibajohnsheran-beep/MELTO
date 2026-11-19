@@ -1,0 +1,62 @@
+
+/* ==========================================
+   MELTO - FLAVOURS COLLECTION PAGE
+========================================== */
+
+.melto-flavours-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #fff0f6 0%,
+    #ffe0ec 50%,
+    #fff1f7 100%
+  );
+}
+
+/* Existing ProductCollection design
+   and card styling are preserved. */
+
+.melto-flavours-page *,
+.melto-flavours-page *::before,
+.melto-flavours-page *::after {
+  box-sizing: border-box;
+}
+
+.melto-flavours-page .melto-collection {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+}
+
+/* PRODUCT CARDS */
+
+.melto-flavours-page img {
+  max-width: 100%;
+}
+
+/* SMOOTH NAVIGATION */
+
+#flavours-page {
+  scroll-margin-top: 90px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .melto-flavours-page {
+    min-height: 80vh;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .melto-flavours-page {
+    min-height: auto;
+  }
+}

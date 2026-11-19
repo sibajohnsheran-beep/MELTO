@@ -1,0 +1,287 @@
+
+/* ========================================
+   MELTO ADMIN LAYOUT
+======================================== */
+
+.melto-admin-app {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f6fa;
+  color: #34283a;
+  font-family: "Nunito", sans-serif;
+}
+
+.melto-admin-app *,
+.melto-admin-app *::before,
+.melto-admin-app *::after {
+  box-sizing: border-box;
+}
+
+.melto-admin-app button {
+  font-family: inherit;
+}
+
+/* MAIN AREA */
+
+.melto-admin-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+/* TOP BAR */
+
+.melto-admin-topbar {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  min-height: 103px;
+  padding: 22px 35px;
+
+  border-bottom: 1px solid #ebe5ee;
+  background: #ffffff;
+}
+
+.melto-admin-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+}
+
+.melto-admin-topbar-heading span {
+  display: block;
+  margin-bottom: 6px;
+  color: #a596aa;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.melto-admin-topbar-heading h2 {
+  margin: 0;
+  color: #34283a;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.melto-admin-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.melto-admin-preview-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 15px;
+  border: 1px solid #f6d5e3;
+  border-radius: 30px;
+
+  background: #fff0f6;
+  color: #cf347b;
+
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.melto-admin-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+
+  border-radius: 14px;
+  background: #e91e72;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.melto-admin-menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #f2dce6;
+  border-radius: 12px;
+
+  background: #fff3f8;
+  color: #d92971;
+
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+
+.melto-admin-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 32px 35px 70px;
+}
+
+/* PLACEHOLDER MODULES */
+
+.melto-admin-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 510px;
+  padding: 45px 25px;
+
+  border: 1px solid #eee6f0;
+  border-radius: 23px;
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.melto-admin-placeholder-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 85px;
+  height: 85px;
+  margin-bottom: 24px;
+
+  border-radius: 24px;
+  background: #ffe8f1;
+  color: #e91e72;
+}
+
+.melto-admin-placeholder-label {
+  color: #d92971;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.melto-admin-placeholder h1 {
+  margin: 17px 0 10px;
+  color: #34283a;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(27px, 4vw, 42px);
+}
+
+.melto-admin-placeholder > p {
+  max-width: 540px;
+  color: #93869b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.melto-admin-placeholder-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  max-width: 475px;
+  margin: 20px 0 25px;
+  padding: 16px;
+
+  border: 1px solid #f2dce7;
+  border-radius: 15px;
+
+  background: #fff4f8;
+  color: #97758b;
+
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.melto-admin-placeholder-message svg {
+  flex-shrink: 0;
+  color: #e91e72;
+}
+
+.melto-admin-placeholder-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 13px 22px;
+
+  border: none;
+  border-radius: 35px;
+
+  background: #e91e72;
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.melto-admin-placeholder-back:hover {
+  background: #c91761;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .melto-admin-topbar {
+    padding: 20px 24px;
+    min-height: 85px;
+  }
+
+  .melto-admin-menu-button {
+    display: flex;
+  }
+
+  .melto-admin-content {
+    padding: 25px 24px 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .melto-admin-topbar {
+    padding: 17px 15px;
+  }
+
+  .melto-admin-topbar-heading h2 {
+    font-size: 20px;
+  }
+
+  .melto-admin-topbar-heading span {
+    font-size: 10px;
+  }
+
+  .melto-admin-preview-badge {
+    display: none;
+  }
+
+  .melto-admin-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .melto-admin-content {
+    padding: 18px 14px 45px;
+  }
+
+  .melto-admin-placeholder {
+    min-height: 400px;
+    padding: 32px 17px;
+  }
+}

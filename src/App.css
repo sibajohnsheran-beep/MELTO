@@ -1,0 +1,23 @@
+
+/* ========================================
+   MELTO – MAIN APPLICATION STYLES
+======================================== */
+
+.melto-app {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #fff5ea;
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-app *,
+  .melto-app *::before,
+  .melto-app *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+  }
+}

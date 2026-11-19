@@ -1,0 +1,615 @@
+
+/* ========================================
+   MELTO - PREMIUM FOOTER
+======================================== */
+
+.melto-footer {
+  position: relative;
+  overflow: hidden;
+  background: #fff0f5;
+  color: #653525;
+}
+
+/* ========================================
+   TOP CTA BANNER
+======================================== */
+
+.melto-footer-cta-wrapper {
+  padding: 75px 5% 35px;
+}
+
+.melto-footer-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+
+  max-width: 1280px;
+  min-height: 335px;
+  margin: 0 auto;
+
+  border: 1px solid #f7cade;
+  border-radius: 35px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      #ffeaf2,
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      #ffdce9,
+      #ffc5df 55%,
+      #e8d8ff
+    );
+
+  box-shadow: 0 16px 45px #bd6b9022;
+  overflow: hidden;
+}
+
+.melto-footer-cta-content {
+  position: relative;
+  z-index: 4;
+  padding: 43px 50px;
+}
+
+.melto-footer-cta-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #e91e72;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+}
+
+.melto-footer-cta h2 {
+  max-width: 600px;
+  margin: 15px 0;
+
+  font-family: "Poppins", sans-serif;
+  color: #653525;
+
+  font-size: clamp(32px, 3.5vw, 50px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.melto-footer-cta h2 span {
+  color: #e91e72;
+}
+
+.melto-footer-cta-content > p {
+  max-width: 455px;
+  margin: 0;
+
+  color: #8b5d72;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* ========================================
+   CTA BUTTONS
+======================================== */
+
+.melto-footer-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.melto-footer-primary-btn,
+.melto-footer-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 47px;
+  padding: 13px 20px;
+  border-radius: 40px;
+
+  font-size: 12px;
+  font-weight: 900;
+  transition: 0.25s ease;
+}
+
+.melto-footer-primary-btn {
+  background: linear-gradient(
+    180deg,
+    #ff559a,
+    #e40f69
+  );
+
+  color: white;
+  box-shadow: 0 8px 18px #db35792d;
+}
+
+.melto-footer-secondary-btn {
+  border: 1px solid #efa3bf;
+  background: #ffffffc9;
+  color: #653525;
+}
+
+.melto-footer-primary-btn:hover,
+.melto-footer-secondary-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   CTA MASCOT
+======================================== */
+
+.melto-footer-cta-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 335px;
+}
+
+.melto-footer-cta-visual::before {
+  content: "";
+  position: absolute;
+
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #ffffffc8,
+    #ffb9d873 65%,
+    transparent 75%
+  );
+
+  filter: blur(10px);
+}
+
+.melto-footer-cta-visual img {
+  position: relative;
+  z-index: 2;
+
+  width: min(85%, 260px);
+  max-height: 315px;
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 13px 14px #ae5b7940
+  );
+
+  animation: meltoFooterFloat 4s
+    ease-in-out infinite;
+}
+
+.melto-footer-decoration {
+  position: absolute;
+  z-index: 3;
+  font-size: 35px;
+}
+
+.footer-star-one {
+  top: 34px;
+  left: 12%;
+  color: #ffb92a;
+}
+
+.footer-star-two {
+  top: 48px;
+  right: 17%;
+  color: #ee5796;
+}
+
+.footer-star-three {
+  bottom: 35px;
+  right: 14%;
+  color: #a17ddd;
+}
+
+@keyframes meltoFooterFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+/* ========================================
+   MAIN FOOTER GRID
+======================================== */
+
+.melto-footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 40px;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 55px 25px 65px;
+}
+
+/* ========================================
+   BRAND COLUMN
+======================================== */
+
+.melto-footer-brand {
+  min-width: 0;
+}
+
+.melto-footer-logo {
+  display: block;
+
+  width: 130px;
+  height: auto;
+  border-radius: 18px;
+
+  object-fit: contain;
+}
+
+.melto-footer-brand > p {
+  max-width: 285px;
+  margin: 22px 0;
+
+  color: #966f80;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.melto-footer-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 14px;
+  border: 1px solid #f8ccdf;
+  border-radius: 40px;
+
+  background: #ffe1ed;
+  color: #d62b76;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* ========================================
+   FOOTER NAVIGATION COLUMNS
+======================================== */
+
+.melto-footer-column h3 {
+  margin: 13px 0 23px;
+
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.melto-footer-column nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.melto-footer-column nav a {
+  color: #916a7b;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.melto-footer-column nav a:hover {
+  color: #e91e72;
+  transform: translateX(4px);
+}
+
+/* ========================================
+   CONTACT COLUMN
+======================================== */
+
+.melto-footer-contact > p {
+  margin: 0 0 22px;
+
+  color: #967082;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.melto-footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #d92971;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.melto-footer-service-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-top: 23px;
+
+  color: #a27c8e;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.melto-footer-service-note svg {
+  flex-shrink: 0;
+  color: #e91e72;
+}
+
+/* ========================================
+   FOOTER DIVIDER
+======================================== */
+
+.melto-footer-divider {
+  max-width: 1230px;
+  height: 1px;
+  margin: 0 auto;
+  background: #f2cedc;
+}
+
+/* ========================================
+   BOTTOM FOOTER
+======================================== */
+
+.melto-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.melto-footer-bottom > p {
+  margin: 0;
+
+  color: #a47d8f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.melto-footer-bottom-tagline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: #d92971;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* ========================================
+   NEIRAHTECH DEVELOPER CREDIT
+======================================== */
+
+.melto-footer-developer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-align: center;
+}
+
+.melto-footer-developed-by {
+  color: #966f80;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.melto-footer-developed-by strong {
+  color: #653525;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.melto-footer-developer-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: #e91e72;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.melto-footer-developer-phone:hover {
+  color: #a91a54;
+  text-decoration: underline;
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+======================================== */
+
+.melto-footer-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 30px;
+
+  background: #ffe0eb;
+  color: #d92971;
+
+  font-size: 12px;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.melto-footer-back-top:hover {
+  background: #ffd1e2;
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   FLOATING DECORATIONS
+======================================== */
+
+.melto-footer-floating-decoration {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+
+  font-size: 30px;
+  opacity: 0.5;
+}
+
+.decoration-a {
+  left: 2%;
+  top: 57%;
+  color: #ed5e9b;
+}
+
+.decoration-b {
+  right: 2%;
+  bottom: 20%;
+  color: #a582db;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+  .melto-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .melto-footer-cta-content {
+    padding: 35px;
+  }
+
+  .melto-footer-bottom {
+    gap: 16px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+  .melto-footer-cta-wrapper {
+    padding: 55px 5% 25px;
+  }
+
+  .melto-footer-cta {
+    grid-template-columns: 1fr;
+    border-radius: 25px;
+  }
+
+  .melto-footer-cta-content {
+    padding: 33px 23px 10px;
+    text-align: center;
+  }
+
+  .melto-footer-cta-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .melto-footer-cta h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .melto-footer-cta-content > p {
+    font-size: 13px;
+  }
+
+  .melto-footer-cta-buttons {
+    justify-content: center;
+  }
+
+  .melto-footer-cta-visual {
+    height: 220px;
+  }
+
+  .melto-footer-cta-visual img {
+    width: 190px;
+    max-height: 210px;
+  }
+
+  .melto-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+    padding: 38px 5%;
+  }
+
+  .melto-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .melto-footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .melto-footer-column h3 {
+    font-size: 14px;
+  }
+
+  .melto-footer-bottom {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    padding: 25px 5%;
+  }
+
+  .melto-footer-developer {
+    gap: 9px;
+    margin: 10px 0;
+  }
+
+  .melto-footer-developer-phone {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-footer-cta-visual img {
+    animation: none;
+  }
+
+  .melto-footer a {
+    transition: none;
+  }
+
+  .melto-footer a:hover {
+    transform: none;
+  }
+}

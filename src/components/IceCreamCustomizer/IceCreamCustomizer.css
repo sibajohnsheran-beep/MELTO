@@ -1,0 +1,971 @@
+
+/* ==========================================
+   MELTO - APPROVED PINK CUSTOMIZER DESIGN
+========================================== */
+
+.melto-builder {
+  padding: 38px 3.5% 60px;
+  background: linear-gradient(
+    180deg,
+    #fff2f7 0%,
+    #ffe8f2 100%
+  );
+  scroll-margin-top: 90px;
+  font-family: Inter, "Nunito", sans-serif;
+  color: #60251f;
+}
+
+.melto-builder *,
+.melto-builder *::before,
+.melto-builder *::after {
+  box-sizing: border-box;
+}
+
+.melto-builder button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.melto-builder button:focus-visible {
+  outline: 3px solid #ea146e;
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   MAIN TWO-COLUMN DESIGN
+========================================== */
+
+.melto-builder-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, 1fr);
+  gap: 18px;
+
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 13px;
+
+  background: linear-gradient(
+    135deg,
+    #ffd3e4,
+    #ffc9e5 55%,
+    #fff2f8
+  );
+
+  border: 3px solid white;
+  border-radius: 37px;
+
+  box-shadow:
+    0 16px 40px #d76f9b36,
+    inset 0 0 0 2px #f79ac45c;
+}
+
+/* ==========================================
+   LEFT ICE CREAM SHOWCASE
+========================================== */
+
+.melto-builder-showcase {
+  position: relative;
+  isolation: isolate;
+  min-height: 590px;
+  overflow: hidden;
+  border-radius: 27px;
+
+  background:
+    radial-gradient(
+      circle at 76% 40%,
+      #ffd0df 0%,
+      transparent 52%
+    ),
+    linear-gradient(
+      145deg,
+      #fff6f8 0%,
+      #ffd4e4 68%,
+      #ffb9d8 100%
+    );
+}
+
+.melto-builder-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 3% 2% auto 2%;
+  height: 30%;
+
+  border-top: 3px solid #ffffff90;
+  border-radius: 50% 50% 0 0;
+  pointer-events: none;
+}
+
+/* LEFT HEADING */
+
+.melto-builder-showcase-copy {
+  position: absolute;
+  z-index: 4;
+  left: 6%;
+  top: 7%;
+  width: min(49%, 330px);
+}
+
+.melto-builder-kicker {
+  display: inline-block;
+  padding: 6px 15px;
+
+  border: 1px solid #ffafd1;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    180deg,
+    #ffe5f0,
+    #ffc1db
+  );
+
+  color: #dd0064;
+  font-family: "Nunito", sans-serif;
+  font-weight: 1000;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+
+  box-shadow: 0 2px 5px #ed80b13f;
+}
+
+.melto-builder-showcase h2 {
+  margin: 15px 0 12px;
+  color: #6e231d;
+
+  font-family:
+    "Nunito",
+    "Poppins",
+    sans-serif;
+
+  font-size: clamp(32px, 3.6vw, 54px);
+  font-weight: 1000;
+  font-style: italic;
+  letter-spacing: -2px;
+  line-height: 1.03;
+
+  text-shadow: 0 3px 0 #fff6f8;
+}
+
+.melto-builder-showcase h2 span {
+  display: block;
+  color: #e30063;
+  -webkit-text-stroke: 0.3px #b51b57;
+  text-shadow: 0 3px 0 #fff5f9;
+}
+
+.melto-builder-showcase-copy p {
+  margin: 0;
+  max-width: 260px;
+
+  color: #633b40;
+  font-size: clamp(12px, 1.1vw, 15px);
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+/* ==========================================
+   INTERACTIVE 3D ICE CREAM
+========================================== */
+
+.melto-builder-three-scene {
+  position: absolute;
+  z-index: 2;
+
+  right: 0;
+  bottom: 5%;
+  width: 74%;
+  height: 93%;
+
+  touch-action: pan-y;
+}
+
+/* React Three Fiber Canvas container */
+
+.melto-builder-three-scene > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.melto-builder-three-scene canvas {
+  display: block;
+  outline: none;
+}
+
+/* DRAG TO ROTATE LABEL */
+
+.melto-builder-rotate-hint {
+  position: absolute;
+  z-index: 4;
+  right: 4%;
+  bottom: 3.5%;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 11px;
+
+  border: 1px solid white;
+  border-radius: 100px;
+
+  background: #ffffffc7;
+  color: #9b5273;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* CANDY DECORATIONS */
+
+.melto-builder-decor {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  text-shadow: 0 4px 8px #f36c993d;
+}
+
+.decor-one {
+  left: 43%;
+  top: 18%;
+  color: #ffc021;
+  font-size: 33px;
+  transform: rotate(-13deg);
+}
+
+.decor-two {
+  right: 12%;
+  top: 12%;
+  color: #e90b75;
+  font-size: 37px;
+}
+
+.decor-three {
+  left: 18%;
+  bottom: 16%;
+  color: #ffba2f;
+  font-size: 17px;
+}
+
+.decor-four {
+  right: 21%;
+  bottom: 13%;
+  color: #f24791;
+  font-size: 26px;
+}
+
+/* SMALL PRODUCT IMAGE */
+
+.melto-builder-accent-ice {
+  position: absolute;
+  z-index: 3;
+  left: 4%;
+  bottom: 6%;
+
+  width: 23%;
+  max-width: 145px;
+
+  filter: drop-shadow(
+    0 9px 8px #c75b8b48
+  );
+
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+/* SOFT FLOOR */
+
+.melto-builder-ground {
+  position: absolute;
+  z-index: 1;
+
+  left: -8%;
+  right: -8%;
+  bottom: -7%;
+  height: 15%;
+
+  background: radial-gradient(
+    ellipse at 45% 10%,
+    #fffdfddb 15%,
+    #ffabd074 68%,
+    transparent 75%
+  );
+
+  border-radius: 50% 50% 0 0;
+}
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.melto-builder-panel {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 18px;
+
+  border: 2px solid white;
+  border-radius: 27px;
+
+  background: #fffcfdf0;
+
+  box-shadow: 0 8px 22px #da649026;
+}
+
+.melto-builder-group,
+.melto-builder-sauces {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ffe3ed;
+}
+
+/* STEP HEADINGS */
+
+.melto-builder-step-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 0 0 10px;
+
+  color: #67291e;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 1000;
+}
+
+.melto-builder-step-heading > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    180deg,
+    #ff368c,
+    #ed0b71
+  );
+
+  color: white;
+  font-size: 12px;
+
+  box-shadow: 0 3px 7px #ec428d48;
+}
+
+.melto-builder-step-heading small {
+  font-size: 10px;
+  color: #a9637a;
+  font-weight: 800;
+}
+
+/* ==========================================
+   STEP 1 - BASE OPTIONS
+========================================== */
+
+.melto-builder-bases {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.melto-builder-base {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 0;
+  min-height: 75px;
+
+  border: 2px solid #ffdfeb;
+  border-radius: 14px;
+
+  background: #fff7fb;
+  color: #5e3028;
+
+  font-weight: 900;
+  font-size: 11px;
+
+  transition:
+    transform 0.18s,
+    border-color 0.18s;
+}
+
+.melto-builder-base-icon {
+  font-size: 29px;
+  line-height: 1.2;
+}
+
+.melto-builder-base.selected,
+.melto-builder-base:hover {
+  background: #fff0f6;
+  border-color: #ed3381;
+}
+
+.melto-builder-selected-check {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #e51c70;
+}
+
+/* ==========================================
+   STEP 2 - FLAVOURS
+========================================== */
+
+.melto-builder-heading-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.melto-builder-heading-line
+.melto-builder-step-heading {
+  margin: 0;
+}
+
+/* SCOOP NUMBER COUNTER */
+
+.melto-builder-count {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 3px;
+  border-radius: 30px;
+  background: #ffeff5;
+  border: 1px solid #fbd4e3;
+}
+
+.melto-builder-count > button {
+  display: grid;
+  place-items: center;
+
+  width: 25px;
+  height: 25px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #ffd4e5;
+  color: #e20e70;
+}
+
+.melto-builder-count > button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.melto-builder-count > strong {
+  font-size: 12px;
+  min-width: 14px;
+  text-align: center;
+}
+
+/* SCOOP 1 / SCOOP 2 / SCOOP 3 */
+
+.melto-builder-scoop-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 11px;
+}
+
+.melto-builder-scoop-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  min-height: 26px;
+  padding: 4px 7px;
+
+  border: 1px solid #f8d4e2;
+  border-radius: 20px;
+
+  color: #835169;
+  background: #fff6fa;
+
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.melto-builder-scoop-tabs button.selected {
+  border-color: #f1287a;
+  background: #ffe0ec;
+  color: #95284b;
+}
+
+.melto-builder-scoop-tabs button span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.melto-builder-scoop-tabs button small {
+  font-size: 9px;
+  color: #a05c76;
+}
+
+/* SIX FLAVOUR CHOICES */
+
+.melto-builder-flavour-options {
+  display: grid;
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.melto-builder-flavour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  min-width: 0;
+  min-height: 80px;
+  padding: 5px 2px;
+
+  border: 2px solid transparent;
+  border-radius: 14px;
+
+  background: #fff6fa;
+  color: #6b382d;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.melto-builder-flavour.selected,
+.melto-builder-flavour:hover {
+  background: #ffe4ee;
+  border-color: #ed2780;
+}
+
+.melto-builder-flavour-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  width: 49px;
+  height: 49px;
+}
+
+.melto-builder-flavour-visual img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 3px 4px #bd57892d
+  );
+}
+
+/* IMAGE FALLBACK */
+
+.melto-builder-flavour-fallback {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      #ffffff88,
+      transparent 42%
+    ),
+    var(--flavour-color, #f87aa5);
+
+  box-shadow:
+    inset -4px -5px 6px #b0406540;
+}
+
+/* ==========================================
+   STEP 3 - TOPPINGS
+========================================== */
+
+.melto-builder-toppings {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.melto-builder-toppings button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+
+  min-width: 0;
+  min-height: 74px;
+  padding: 7px 2px;
+
+  border: 2px solid #ffe0eb;
+  border-radius: 13px;
+
+  background: #fff7fa;
+  color: #60362d;
+}
+
+.melto-builder-toppings button.selected,
+.melto-builder-toppings button:hover {
+  border-color: #ef3985;
+  background: #ffebf3;
+}
+
+.melto-builder-toppings button > span {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.melto-builder-toppings button strong {
+  font-size: 10px;
+}
+
+.melto-builder-toppings button small {
+  font-size: 9px;
+  color: #b7778e;
+}
+
+/* ==========================================
+   STEP 4 - SAUCES
+========================================== */
+
+.melto-builder-sauce-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.melto-builder-sauce-options button {
+  border: 1px solid #f7d5e2;
+  border-radius: 50px;
+
+  padding: 7px 10px;
+
+  background: #fff6fa;
+  color: #784b51;
+
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.melto-builder-sauce-options button.selected,
+.melto-builder-sauce-options button:hover {
+  border-color: #f02f80;
+  background: #ffe4ee;
+  color: #c11061;
+}
+
+.melto-builder-sauce-options button small {
+  margin-left: 3px;
+  font-size: 9px;
+  color: #bb6488;
+}
+
+/* ==========================================
+   BOTTOM TOTAL + ADD TO CART
+========================================== */
+
+.melto-builder-checkout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-top: auto;
+  padding: 12px 13px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    100deg,
+    #ffe0ed,
+    #ffd6e7
+  );
+
+  border: 1px solid #ffc8de;
+}
+
+.melto-builder-total {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.melto-builder-total > span {
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+.melto-builder-total small {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  color: #a16f7e;
+}
+
+.melto-builder-total strong {
+  color: #da0064;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 1000;
+  white-space: nowrap;
+}
+
+.melto-builder-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+
+  min-height: 42px;
+
+  border: 1px solid #ff9cc6;
+  border-radius: 50px;
+  padding: 10px 16px;
+
+  color: white;
+
+  background: linear-gradient(
+    180deg,
+    #ff569b,
+    #dc0065
+  );
+
+  box-shadow:
+    0 4px 0 #b81c62,
+    0 7px 12px #d8377e3d;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.melto-builder-add:hover {
+  filter: brightness(1.05);
+}
+
+.melto-builder-add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* BELOW SECTION NOTE */
+
+.melto-builder-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  margin: 14px 0 0;
+
+  text-align: center;
+
+  color: #ad7993;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1180px) {
+  .melto-builder-shell {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+  }
+
+  .melto-builder-showcase {
+    min-height: 620px;
+  }
+
+  .melto-builder-showcase-copy {
+    width: 57%;
+  }
+
+  .melto-builder-three-scene {
+    width: 83%;
+    height: 79%;
+    bottom: 7%;
+  }
+
+  .melto-builder-flavour-options {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .melto-builder-panel {
+    padding: 15px;
+  }
+
+  .melto-builder-flavour {
+    min-height: 70px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 850px) {
+  .melto-builder-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .melto-builder-showcase {
+    min-height: 520px;
+  }
+
+  .melto-builder-showcase-copy {
+    width: 45%;
+  }
+
+  .melto-builder-three-scene {
+    width: 75%;
+    height: 95%;
+  }
+
+  .melto-builder-flavour-options {
+    grid-template-columns:
+      repeat(6, minmax(0, 1fr));
+  }
+
+  .melto-builder-panel {
+    max-width: none;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .melto-builder {
+    padding: 24px 3% 48px;
+  }
+
+  .melto-builder-shell {
+    padding: 7px;
+    gap: 9px;
+    border-radius: 25px;
+  }
+
+  .melto-builder-showcase {
+    min-height: 420px;
+    border-radius: 20px;
+  }
+
+  .melto-builder-showcase-copy {
+    top: 6%;
+    left: 5%;
+    width: 61%;
+  }
+
+  .melto-builder-kicker {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .melto-builder-showcase h2 {
+    font-size: clamp(29px, 8.2vw, 43px);
+    margin: 9px 0 8px;
+    letter-spacing: -1.2px;
+  }
+
+  .melto-builder-showcase-copy p {
+    font-size: 11px;
+    max-width: 200px;
+  }
+
+  .melto-builder-three-scene {
+    right: -8%;
+    bottom: 3%;
+    width: 100%;
+    height: 84%;
+  }
+
+  .melto-builder-accent-ice {
+    width: 23%;
+    bottom: 7%;
+  }
+
+  .melto-builder-rotate-hint {
+    font-size: 9px;
+    right: 3%;
+  }
+
+  .melto-builder-panel {
+    padding: 13px;
+    border-radius: 19px;
+    gap: 13px;
+  }
+
+  .melto-builder-step-heading {
+    font-size: 13px;
+  }
+
+  .melto-builder-bases {
+    gap: 6px;
+  }
+
+  .melto-builder-base {
+    min-height: 70px;
+    font-size: 10px;
+  }
+
+  .melto-builder-flavour-options {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .melto-builder-flavour {
+    min-height: 83px;
+  }
+
+  .melto-builder-checkout {
+    flex-wrap: wrap;
+  }
+
+  .melto-builder-add {
+    flex: 1;
+  }
+
+  .melto-builder-sauces {
+    padding-bottom: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-builder button {
+    transition: none;
+  }
+}

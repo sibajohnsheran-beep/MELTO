@@ -1,0 +1,130 @@
+
+/* ==========================================
+   MELTO APPROVED HOMEPAGE PROMOTIONS
+========================================== */
+
+.melto-home-promos {
+  position: relative;
+  width: 100%;
+  padding: 0 0 28px;
+
+  background: linear-gradient(
+    180deg,
+    #ffd2e5 0%,
+    #ffe6f0 60%,
+    #fff0f6 100%
+  );
+}
+
+.melto-home-promos *,
+.melto-home-promos *::before,
+.melto-home-promos *::after {
+  box-sizing: border-box;
+}
+
+.melto-home-promos-inner {
+  width: min(94%, 1160px);
+  margin: 0 auto;
+}
+
+/* ORIGINAL ARTWORK */
+
+.melto-promo-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.melto-promo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+/* REAL CLICKABLE CTA AREA
+   ALIGNED TO THE REFERENCE IMAGE */
+
+.melto-promo-hotspot {
+  position: absolute;
+  z-index: 3;
+  display: block;
+
+  background: transparent;
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+/* START CUSTOMISING BUTTON */
+
+.melto-build-hotspot {
+  left: 12.2%;
+  top: 56.5%;
+  width: 24%;
+  height: 15%;
+}
+
+/* SWEET OFFERS */
+
+.melto-offers-wrap {
+  margin-top: 4px;
+}
+
+.melto-offers-hotspot {
+  left: 72%;
+  top: 49%;
+  width: 18%;
+  height: 31%;
+}
+
+/* KEYBOARD FOCUS */
+
+.melto-promo-hotspot:focus-visible {
+  outline: 3px solid #e91e72;
+  outline-offset: 3px;
+}
+
+/* TARGET SECTIONS */
+
+#melto-customizer-section,
+#melto-offers-products {
+  scroll-margin-top: 95px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .melto-home-promos-inner {
+    width: 100%;
+  }
+
+  .melto-promo-image-wrap {
+    border-radius: 12px;
+  }
+
+  .melto-promo-hotspot {
+    min-height: 28px;
+  }
+
+  .melto-offers-wrap {
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 420px) {
+  .melto-build-hotspot {
+    left: 11%;
+    width: 27%;
+    top: 53%;
+    height: 18%;
+  }
+
+  .melto-offers-hotspot {
+    left: 70%;
+    width: 21%;
+    top: 44%;
+    height: 38%;
+  }
+}

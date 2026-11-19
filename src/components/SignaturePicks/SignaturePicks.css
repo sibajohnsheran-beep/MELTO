@@ -1,0 +1,510 @@
+
+/* MELTO - COMPACT SIGNATURE PICKS */
+
+.melto-signature {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  padding: 48px 0 22px;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 70%,
+      #ffc7df 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      #ffe2ed 0%,
+      #ffd2e5 100%
+    );
+
+  color: #5e2224;
+}
+
+.melto-signature *,
+.melto-signature *::before,
+.melto-signature *::after {
+  box-sizing: border-box;
+}
+
+/* TOP WAVE */
+
+.melto-signature-wave {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* CONTAINER */
+
+.melto-signature-inner {
+  position: relative;
+  z-index: 3;
+  width: min(92%, 1160px);
+  margin: 0 auto;
+}
+
+/* HEADING */
+
+.melto-signature-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.melto-signature-heading-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.melto-signature-heading h2 {
+  margin: 0;
+  color: #692124;
+  font-family: "Nunito", "Poppins", sans-serif;
+  font-size: clamp(27px, 2.55vw, 37px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.12;
+  letter-spacing: -0.9px;
+
+  text-shadow:
+    0 2px 0 #fff0f5,
+    0 4px 8px #9b416d24;
+}
+
+.melto-signature-heading p {
+  margin: 5px 0 0;
+  color: #662a37;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* HEADING SPRINKLES */
+
+.melto-signature-sprinkles {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.melto-signature-sprinkles i {
+  position: absolute;
+  display: block;
+  width: 7px;
+  height: 16px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    #ffe467,
+    #ff9900
+  );
+
+  box-shadow:
+    inset 2px 2px 2px #ffffff80,
+    0 2px 3px #c7701e35;
+}
+
+.melto-signature-sprinkles i:nth-child(1) {
+  top: 1px;
+  left: 16px;
+  transform: rotate(-35deg);
+}
+
+.melto-signature-sprinkles i:nth-child(2) {
+  top: 10px;
+  left: 2px;
+  transform: rotate(65deg);
+}
+
+.melto-signature-sprinkles i:nth-child(3) {
+  top: 24px;
+  left: 15px;
+  height: 11px;
+  transform: rotate(32deg);
+}
+
+.melto-signature-sprinkles.right {
+  transform: scaleX(-1);
+}
+
+/* FOUR COMPACT CARDS */
+
+.melto-signature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.melto-signature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+  overflow: hidden;
+  padding: 7px 8px 14px;
+
+  border: 2px solid #fff;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    150deg,
+    #ffe6f0,
+    #fff4f9 100%
+  );
+
+  box-shadow:
+    0 4px 0 #edaac476,
+    0 9px 15px #b34b8028;
+
+  transition: transform 0.2s ease;
+}
+
+.melto-signature-card:hover {
+  transform: translateY(-3px);
+}
+
+/* IMAGES */
+
+.melto-signature-image-area {
+  width: 100%;
+  height: 158px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+}
+
+.melto-signature-product-image {
+  display: block;
+  width: 100%;
+  max-width: 157px;
+  height: 154px;
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 5px 5px #a65a7925
+  );
+}
+
+/* HEART */
+
+.melto-signature-heart {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 31px;
+  height: 31px;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  color: #f1116b;
+  background: #fff9fce6;
+  cursor: pointer;
+}
+
+.melto-signature-heart.active {
+  color: #e50063;
+  background: #ffe0ec;
+}
+
+/* NAME / PRICE */
+
+.melto-signature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.melto-signature-info h3 {
+  margin: 0 0 4px;
+
+  color: #351c1e;
+  font-family: "Nunito", "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.melto-signature-info p {
+  margin: 0 0 10px;
+
+  color: #351c1e;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ADD TO CART */
+
+.melto-signature-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: min(100%, 145px);
+  min-height: 34px;
+
+  margin-top: auto;
+  padding: 8px 12px;
+
+  border: 1px solid #ff9ac0;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    180deg,
+    #ff64a0,
+    #ef1875 60%,
+    #d5005e
+  );
+
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+
+  box-shadow:
+    0 3px 0 #b81155,
+    0 6px 12px #c12d7135,
+    inset 0 2px 4px #ffffff66;
+
+  cursor: pointer;
+}
+
+.melto-signature-add:hover {
+  filter: brightness(1.04);
+}
+
+.melto-signature-heart:focus-visible,
+.melto-signature-add:focus-visible {
+  outline: 3px solid #ef1875;
+  outline-offset: 3px;
+}
+
+/* DECORATIVE CANDIES */
+
+.melto-signature-decorations {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.melto-signature-candy {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 30% 25%,
+    #fff3f8,
+    #ff8fba 35%,
+    #ed498b 90%
+  );
+
+  box-shadow: 0 4px 8px #a7427133;
+}
+
+.candy-one {
+  right: 3%;
+  top: 17%;
+  width: 22px;
+  height: 22px;
+}
+
+.candy-two {
+  left: 3%;
+  top: 42%;
+  background: #fff6df;
+}
+
+.candy-three {
+  left: 1%;
+  bottom: 13%;
+  width: 23px;
+  height: 23px;
+}
+
+.candy-four {
+  right: 2%;
+  top: 55%;
+  width: 10px;
+  height: 24px;
+  border-radius: 15px;
+  background: #ff9744;
+  transform: rotate(35deg);
+}
+
+.candy-five {
+  right: 7%;
+  bottom: 8%;
+  width: 10px;
+  height: 23px;
+  border-radius: 15px;
+  background: #fa4f9c;
+  transform: rotate(-35deg);
+}
+
+.candy-six {
+  left: 8%;
+  bottom: 5%;
+  background: #8bcf4b;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .melto-signature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .melto-signature-inner {
+    width: min(94%, 650px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .melto-signature {
+    padding: 39px 0 18px;
+  }
+
+  .melto-signature-wave {
+    height: 34px;
+  }
+
+  .melto-signature-heading {
+    margin-bottom: 16px;
+  }
+
+  .melto-signature-heading-row {
+    gap: 6px;
+  }
+
+  .melto-signature-heading h2 {
+    font-size: clamp(22px, 5.9vw, 31px);
+  }
+
+  .melto-signature-heading p {
+    max-width: 330px;
+    margin: 5px auto 0;
+    font-size: 10px;
+  }
+
+  .melto-signature-sprinkles {
+    transform: scale(0.7);
+  }
+
+  .melto-signature-sprinkles.right {
+    transform: scaleX(-1) scale(0.7);
+  }
+
+  .melto-signature-grid {
+    gap: 10px;
+  }
+
+  .melto-signature-card {
+    padding: 5px 5px 12px;
+    border-radius: 16px;
+  }
+
+  .melto-signature-image-area {
+    height: 128px;
+  }
+
+  .melto-signature-product-image {
+    max-width: 120px;
+    height: 120px;
+  }
+
+  .melto-signature-heart {
+    top: 5px;
+    right: 5px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .melto-signature-heart svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .melto-signature-info h3 {
+    font-size: 12px;
+  }
+
+  .melto-signature-info p {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+
+  .melto-signature-add {
+    min-height: 30px;
+    width: min(100%, 125px);
+    padding: 7px;
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-signature-card {
+    transition: none;
+  }
+}
+
+
+/* ==========================================
+   MELTO - SIX PRODUCTS LAYOUT
+========================================== */
+
+/* Desktop: 4 products in first row,
+   2 products centered in second row */
+
+@media (min-width: 851px) {
+  .melto-signature-grid
+  .melto-signature-card:nth-child(5):nth-last-child(2) {
+    grid-column: 2;
+  }
+}
+
+/* Tablet and mobile: 2 columns */
+
+@media (max-width: 850px) {
+  .melto-signature-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+  .melto-signature-grid
+  .melto-signature-card:nth-child(5):nth-last-child(2) {
+    grid-column: auto;
+  }
+}

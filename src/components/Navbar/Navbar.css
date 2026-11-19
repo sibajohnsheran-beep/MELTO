@@ -1,0 +1,232 @@
+
+/* =====================================
+   MELTO NAVBAR
+===================================== */
+
+.melto-header {
+  position: relative;
+  z-index: 100;
+  background: rgba(255, 248, 249, 0.97);
+  border-bottom: 1px solid #f7dce6;
+}
+
+.melto-navbar {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 92px;
+  margin: 0 auto;
+  padding: 0 4.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+/* LOGO */
+
+.melto-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.melto-logo {
+  width: 86px;
+  height: 78px;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+}
+
+/* NAVIGATION LINKS */
+
+.melto-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.melto-nav-links a {
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  color: #653525;
+  transition: color 0.2s ease;
+}
+
+.melto-nav-links a:hover,
+.melto-nav-links a.active {
+  color: #e91e72;
+}
+
+/* NAVBAR ACTIONS */
+
+.melto-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.melto-icon-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #653525;
+  transition: 0.2s ease;
+}
+
+.melto-icon-button:hover {
+  color: #e91e72;
+  background: #ffe4ef;
+}
+
+/* CART COUNT */
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e91e72;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* ORDER BUTTON */
+
+.melto-order-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 23px;
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    #ff559a,
+    #e40f69
+  );
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px #e91e7233;
+  transition: 0.25s ease;
+}
+
+.melto-order-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px #e91e7244;
+}
+
+/* MOBILE MENU */
+
+.melto-mobile-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #653525;
+}
+
+.melto-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5% 22px;
+  background: #fff8fa;
+}
+
+.melto-mobile-menu a {
+  padding: 13px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  border-bottom: 1px solid #f7dce6;
+}
+
+/* SEARCH PANEL */
+
+.melto-search-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(420px, 90vw);
+  padding: 14px 17px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 15px 40px #65352525;
+}
+
+.melto-search-panel input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+}
+
+.melto-search-panel button {
+  display: flex;
+  border: none;
+  background: transparent;
+  color: #653525;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1220px) {
+  .melto-nav-links {
+    gap: 13px;
+  }
+
+  .melto-nav-links a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 980px) {
+  .melto-nav-links {
+    display: none;
+  }
+
+  .melto-mobile-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 650px) {
+  .melto-navbar {
+    min-height: 72px;
+    padding: 0 4%;
+    gap: 8px;
+  }
+
+  .melto-logo {
+    width: 66px;
+    height: 66px;
+  }
+
+  .melto-nav-actions {
+    gap: 3px;
+  }
+
+  .melto-icon-button {
+    width: 32px;
+  }
+
+  .melto-order-button {
+    display: none;
+  }
+}

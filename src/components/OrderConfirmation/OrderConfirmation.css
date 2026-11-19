@@ -1,0 +1,275 @@
+
+/* ========================================
+   MELTO - DEMO ORDER CONFIRMATION
+======================================== */
+
+.melto-confirmation-page {
+  min-height: 100vh;
+  padding: 45px 5% 85px;
+  background:
+    radial-gradient(circle at 15% 20%, #ffdeec, transparent 38%),
+    radial-gradient(circle at 90% 80%, #e9ddff, transparent 35%),
+    #fff8fb;
+}
+
+.melto-confirmation-container {
+  max-width: 730px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.melto-confirmation-logo {
+  display: block;
+  width: 100px;
+  height: 95px;
+  margin: 0 auto 22px;
+  object-fit: contain;
+}
+
+.melto-confirmation-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: #ffe4ef;
+  color: #e91e72;
+}
+
+.melto-confirmation-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e91e72;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.melto-confirmation-container > h1 {
+  margin: 20px 0 15px;
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.melto-confirmation-container > h1 span {
+  color: #e91e72;
+}
+
+.melto-confirmation-intro {
+  color: #987386;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.melto-confirmation-demo-alert {
+  margin: 25px 0;
+  padding: 20px;
+  border: 1px solid #f5c7d9;
+  border-radius: 19px;
+  background: #ffe9f1;
+  text-align: left;
+}
+
+.melto-confirmation-demo-alert strong {
+  color: #b62468;
+  font-size: 14px;
+}
+
+.melto-confirmation-demo-alert p {
+  margin: 7px 0 0;
+  color: #8f6179;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.melto-confirmation-card {
+  padding: 30px;
+  border: 1px solid #f5dce7;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 18px 50px #b66d8d20;
+  text-align: left;
+}
+
+.melto-confirmation-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #f4e0e9;
+  color: #e91e72;
+}
+
+.melto-confirmation-card-head h2 {
+  margin: 0;
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.melto-confirmation-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 0;
+  border-bottom: 1px solid #f7e6ed;
+}
+
+.melto-confirmation-item img {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+  padding: 5px;
+  border-radius: 14px;
+  background: #ffeaf2;
+  object-fit: contain;
+}
+
+.melto-confirmation-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.melto-confirmation-item strong {
+  color: #653525;
+  font-size: 14px;
+}
+
+.melto-confirmation-item small {
+  color: #a58091;
+  font-size: 12px;
+}
+
+.melto-confirmation-item > span {
+  color: #e91e72;
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.melto-confirmation-details {
+  margin: 24px 0;
+  padding: 20px;
+  border-radius: 19px;
+  background: #fff3f8;
+}
+
+.melto-confirmation-details h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 15px;
+  color: #e91e72;
+  font-size: 17px;
+}
+
+.melto-confirmation-details p {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 0;
+  color: #865d71;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.melto-confirmation-details p strong {
+  color: #653525;
+}
+
+.melto-confirmation-total {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #f4e0e9;
+}
+
+.melto-confirmation-total > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #956f81;
+  font-size: 14px;
+}
+
+.melto-confirmation-total strong {
+  color: #653525;
+  white-space: nowrap;
+}
+
+.melto-confirmation-total .melto-confirmation-grand-total {
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid #f4e0e9;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.melto-confirmation-grand-total strong {
+  color: #e91e72;
+  font-size: 24px;
+}
+
+.melto-confirmation-continue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 27px;
+  min-height: 54px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 35px;
+  background: #e91e72;
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-confirmation-continue:hover {
+  transform: translateY(-2px);
+  background: #c91a62;
+}
+
+@media (max-width: 600px) {
+  .melto-confirmation-page {
+    padding: 25px 4% 65px;
+  }
+
+  .melto-confirmation-card {
+    padding: 21px 16px;
+  }
+
+  .melto-confirmation-item img {
+    width: 59px;
+    height: 59px;
+  }
+
+  .melto-confirmation-item > span {
+    font-size: 12px;
+  }
+
+  .melto-confirmation-continue {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-confirmation-continue {
+    transition: none;
+  }
+}

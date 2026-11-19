@@ -1,0 +1,345 @@
+
+/* ==========================================
+   MELTO ORIGINAL FLAVOUR SELECTOR DESIGN
+========================================== */
+
+.melto-flavour-selector {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  max-width: 1160px;
+
+  margin: 0 auto;
+  padding: 0 55px 18px;
+}
+
+/* ==========================================
+   FLAVOUR CARD ROW
+========================================== */
+
+.melto-flavour-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 13px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   INDIVIDUAL FLAVOUR CARDS
+========================================== */
+
+.melto-flavour-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  min-width: 0;
+  height: 134px;
+
+  padding: 12px 7px 10px;
+
+  border: 2px solid rgba(255, 255, 255, 0.98);
+  border-radius: 23px;
+
+  background: rgba(255, 249, 250, 0.92);
+
+  box-shadow:
+    0 7px 12px rgba(168, 75, 112, 0.10),
+    inset 0 1px 4px rgba(255, 255, 255, 0.9);
+
+  color: #653525;
+  font-family: inherit;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* SELECTED CARD */
+
+.melto-flavour-card.selected {
+  border-color: #ff1679;
+
+  background: linear-gradient(
+    180deg,
+    #ffe0ed 0%,
+    #fff0f5 100%
+  );
+
+  box-shadow:
+    0 4px 0 rgba(238, 28, 113, 0.16),
+    0 9px 17px rgba(235, 43, 117, 0.20),
+    inset 0 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* HOVER */
+
+.melto-flavour-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 17px rgba(168, 75, 112, 0.18);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.melto-flavour-card:focus-visible {
+  outline: 3px solid #e91e72;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   INGREDIENT IMAGE
+========================================== */
+
+.melto-flavour-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 91px;
+  height: 82px;
+  flex-shrink: 0;
+
+  background: transparent;
+}
+
+.melto-flavour-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 5px 5px rgba(123, 57, 62, 0.12)
+  );
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ==========================================
+   FLAVOUR NAME
+========================================== */
+
+.melto-flavour-name {
+  display: block;
+
+  color: #653525;
+
+  font-family: "Nunito", "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   LEFT AND RIGHT ARROWS
+========================================== */
+
+.melto-flavour-arrow {
+  position: absolute;
+  top: 47%;
+  z-index: 12;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+  padding: 0;
+
+  border: 1px solid #fff;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #ec1770;
+
+  box-shadow:
+    0 5px 12px rgba(157, 70, 105, 0.14);
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.melto-flavour-arrow:hover {
+  background: #ffe9f2;
+
+  box-shadow:
+    0 7px 15px rgba(157, 70, 105, 0.22);
+}
+
+.melto-flavour-arrow:focus-visible {
+  outline: 3px solid #e91e72;
+  outline-offset: 3px;
+}
+
+.melto-flavour-prev {
+  left: 0;
+}
+
+.melto-flavour-next {
+  right: 0;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1080px) {
+  .melto-flavour-selector {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+
+  .melto-flavour-list {
+    gap: 9px;
+  }
+
+  .melto-flavour-card {
+    height: 117px;
+    border-radius: 19px;
+  }
+
+  .melto-flavour-image-wrap {
+    width: 75px;
+    height: 68px;
+  }
+
+  .melto-flavour-name {
+    font-size: 12px;
+  }
+
+  .melto-flavour-arrow {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+/* ==========================================
+   MOBILE / TABLET HORIZONTAL CAROUSEL
+========================================== */
+
+@media (max-width: 700px) {
+  .melto-flavour-selector {
+    padding: 0 39px 12px;
+  }
+
+  .melto-flavour-list {
+    display: flex;
+    gap: 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    padding: 6px 3px 13px;
+  }
+
+  .melto-flavour-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .melto-flavour-card {
+    flex: 0 0 calc((100% - 20px) / 3);
+
+    min-width: 0;
+    height: 112px;
+
+    border-radius: 18px;
+    padding: 9px 5px;
+
+    scroll-snap-align: center;
+  }
+
+  .melto-flavour-image-wrap {
+    width: 70px;
+    height: 68px;
+  }
+
+  .melto-flavour-name {
+    font-size: 11px;
+  }
+
+  .melto-flavour-arrow {
+    width: 34px;
+    height: 34px;
+
+    top: 43%;
+  }
+
+  .melto-flavour-arrow svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 420px) {
+  .melto-flavour-list {
+    gap: 9px;
+  }
+
+  .melto-flavour-card {
+    flex: 0 0 calc((100% - 9px) / 2);
+    height: 116px;
+  }
+
+  .melto-flavour-image-wrap {
+    width: 78px;
+    height: 71px;
+  }
+
+  .melto-flavour-name {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-flavour-card,
+  .melto-flavour-arrow {
+    transition: none;
+  }
+
+  .melto-flavour-card:hover {
+    transform: none;
+  }
+
+  .melto-flavour-list {
+    scroll-behavior: auto;
+  }
+}

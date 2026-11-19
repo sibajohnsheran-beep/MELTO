@@ -1,0 +1,610 @@
+
+/* ==========================================
+   MELTO SPECIAL OFFERS
+   REAL ICE CREAM PRODUCT IMAGES
+========================================== */
+
+.melto-special {
+  width: 100%;
+  padding: 34px 3% 44px;
+  background: linear-gradient(
+    180deg,
+    #fff0f6,
+    #ffe4ef
+  );
+  font-family: "Nunito", "Poppins", sans-serif;
+  scroll-margin-top: 90px;
+}
+
+.melto-special *,
+.melto-special *::before,
+.melto-special *::after {
+  box-sizing: border-box;
+}
+
+.melto-special button,
+.melto-special select {
+  font: inherit;
+}
+
+.melto-special button {
+  cursor: pointer;
+}
+
+/* MAIN PINK FRAME */
+
+.melto-special-shell {
+  display: grid;
+  grid-template-columns:
+    minmax(230px, 0.95fr)
+    minmax(0, 2.45fr);
+  align-items: center;
+  gap: 20px;
+
+  width: min(100%, 1400px);
+  margin: 0 auto;
+  padding: 20px;
+
+  border: 3px solid #ffffff;
+  border-radius: 34px;
+
+  background: linear-gradient(
+    125deg,
+    #fff2f8,
+    #ffd5e7 65%,
+    #ffe3ef
+  );
+
+  box-shadow: 0 13px 30px #c35c8c28;
+}
+
+/* LEFT HEADING */
+
+.melto-special-intro {
+  min-width: 0;
+  padding: 10px 4px 10px 8px;
+}
+
+.melto-special-eyebrow {
+  display: inline-flex;
+  padding: 7px 15px;
+
+  border: 1px solid #ffacd0;
+  border-radius: 50px;
+
+  background: #ffd1e4;
+  color: #e50068;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.melto-special-intro h2 {
+  margin: 14px 0 12px;
+
+  color: #642820;
+  font-size: clamp(30px, 3.35vw, 49px);
+  font-weight: 1000;
+  font-style: italic;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.melto-special-intro h2 span {
+  display: block;
+  color: #e50069;
+}
+
+.melto-special-intro p {
+  max-width: 320px;
+  margin: 0;
+
+  color: #634247;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* THREE OFFER CARDS */
+
+.melto-special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.melto-special-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 0;
+  min-height: 250px;
+  padding: 8px 8px 13px;
+
+  border: 3px solid #ffffff;
+  border-radius: 23px;
+
+  background: linear-gradient(
+    155deg,
+    #ffe7f1,
+    #ffc0db
+  );
+
+  box-shadow:
+    0 5px 0 #e99cbd,
+    0 11px 20px #b75c8829;
+
+  text-align: center;
+}
+
+.melto-special-card h3 {
+  margin: 1px 0 4px;
+  color: #392324;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 1000;
+  line-height: 1.2;
+}
+
+.melto-special-card p {
+  margin: 0 0 8px;
+  color: #402729;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.melto-special-price-button,
+.melto-special-discount-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 120px;
+  min-height: 35px;
+
+  padding: 7px 15px;
+  border: 1px solid #ff9fc5;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    180deg,
+    #ff60a2,
+    #e40067
+  );
+
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+
+  box-shadow:
+    0 3px 0 #ba145b,
+    inset 0 2px 4px #ffffff70;
+}
+
+.melto-special-price-button:hover,
+.melto-special-discount-button:hover {
+  filter: brightness(1.05);
+}
+
+.melto-special-price-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.melto-special-card .melto-special-weekend-note {
+  margin: 8px 0 0;
+}
+
+/* ==========================================
+   REAL PRODUCT IMAGE AREA
+========================================== */
+
+.melto-offer-artwork {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  flex-shrink: 0;
+  margin-bottom: 5px;
+}
+
+.melto-offer-image-group {
+  position: absolute;
+  inset: 0;
+}
+
+.melto-offer-image-item {
+  position: absolute;
+  bottom: 0;
+  width: 48%;
+  height: 148px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.melto-offer-product-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 8px 7px #aa4c7833
+  );
+}
+
+.melto-offer-product-fallback {
+  font-size: 65px;
+}
+
+/* CANDY SPARKLES */
+
+.melto-offer-decoration {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  font-size: 19px;
+}
+
+.melto-offer-decoration.star-one {
+  top: 22%;
+  left: 2%;
+  color: #ffba27;
+}
+
+.melto-offer-decoration.star-two {
+  right: 1%;
+  bottom: 17%;
+  color: #ed438b;
+}
+
+/* COMBO - TWO CONES */
+
+.melto-offer-artwork.combo
+.melto-offer-image-item:nth-child(1) {
+  left: 6%;
+  transform: rotate(-13deg);
+}
+
+.melto-offer-artwork.combo
+.melto-offer-image-item:nth-child(2) {
+  right: 6%;
+  transform: rotate(13deg);
+}
+
+/* FAMILY - FOUR CONES */
+
+.melto-offer-artwork.family
+.melto-offer-image-item {
+  width: 34%;
+  height: 127px;
+}
+
+.melto-offer-artwork.family
+.melto-offer-image-item:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  transform: rotate(-17deg);
+}
+
+.melto-offer-artwork.family
+.melto-offer-image-item:nth-child(2) {
+  left: 21%;
+  bottom: 18px;
+  z-index: 2;
+  transform: rotate(-5deg);
+}
+
+.melto-offer-artwork.family
+.melto-offer-image-item:nth-child(3) {
+  right: 21%;
+  bottom: 18px;
+  z-index: 2;
+  transform: rotate(5deg);
+}
+
+.melto-offer-artwork.family
+.melto-offer-image-item:nth-child(4) {
+  right: 0;
+  bottom: 0;
+  transform: rotate(17deg);
+}
+
+/* WEEKEND - TWO FEATURED ICE CREAM IMAGES */
+
+.melto-offer-artwork.weekend
+.melto-offer-image-item:nth-child(1) {
+  left: 13%;
+  width: 49%;
+  height: 150px;
+  z-index: 2;
+  transform: rotate(-9deg);
+}
+
+.melto-offer-artwork.weekend
+.melto-offer-image-item:nth-child(2) {
+  right: 9%;
+  width: 49%;
+  height: 145px;
+  transform: rotate(11deg);
+}
+
+/* ==========================================
+   BUNDLE SELECTION POPUP
+========================================== */
+
+.melto-deal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  background: #39182dbb;
+  backdrop-filter: blur(6px);
+}
+
+.melto-deal-modal {
+  position: relative;
+  width: min(100%, 540px);
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 27px;
+
+  border: 3px solid white;
+  border-radius: 25px;
+
+  background: #fff7fb;
+  color: #653525;
+
+  box-shadow: 0 20px 60px #3814244d;
+}
+
+.melto-deal-close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #ffe0ec;
+  color: #e01a71;
+}
+
+.melto-deal-kicker {
+  display: block;
+  color: #e60069;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.melto-deal-modal h3 {
+  margin: 10px 35px 8px 0;
+  color: #653525;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.melto-deal-description {
+  color: #9d7285;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.melto-deal-selectors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.melto-deal-selector,
+.melto-deal-topping {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  color: #653525;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.melto-deal-selector select,
+.melto-deal-topping select {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px;
+
+  border: 1px solid #f5c4d8;
+  border-radius: 11px;
+
+  background: white;
+  color: #653525;
+  font-size: 12px;
+}
+
+.melto-deal-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-top: 24px;
+  padding: 15px;
+
+  border-radius: 17px;
+  background: #ffe3ed;
+}
+
+.melto-deal-modal-footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.melto-deal-modal-footer span {
+  color: #955d74;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.melto-deal-modal-footer strong {
+  color: #e3086b;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.melto-deal-modal-footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  min-height: 43px;
+  padding: 9px 14px;
+
+  border: 0;
+  border-radius: 50px;
+
+  background: #eb1671;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.melto-deal-modal-footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.melto-deal-footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin: 13px 0 0;
+
+  color: #ae7c94;
+  font-size: 11px;
+}
+
+/* ==========================================
+   TABLET AND MOBILE
+========================================== */
+
+@media (max-width: 1050px) {
+  .melto-special-shell {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .melto-special-intro {
+    text-align: center;
+  }
+
+  .melto-special-intro p {
+    margin: 0 auto;
+  }
+
+  .melto-special-intro h2 span {
+    display: inline;
+  }
+}
+
+@media (max-width: 700px) {
+  .melto-special {
+    padding: 24px 3% 40px;
+  }
+
+  .melto-special-shell {
+    padding: 14px;
+    border-radius: 26px;
+  }
+
+  .melto-special-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .melto-special-card {
+    min-height: 236px;
+  }
+
+  .melto-special-card:last-child {
+    grid-column: 1 / -1;
+    width: min(100%, 300px);
+    justify-self: center;
+  }
+
+  .melto-offer-artwork {
+    height: 143px;
+  }
+
+  .melto-offer-image-item {
+    height: 135px;
+  }
+
+  .melto-offer-artwork.family
+  .melto-offer-image-item {
+    height: 112px;
+  }
+
+  .melto-deal-selectors {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 440px) {
+  .melto-special-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .melto-special-card,
+  .melto-special-card:last-child {
+    grid-column: auto;
+    width: min(100%, 305px);
+    justify-self: center;
+  }
+
+  .melto-offer-artwork {
+    height: 155px;
+  }
+
+  .melto-deal-modal {
+    padding: 21px 15px;
+  }
+
+  .melto-deal-modal-footer {
+    flex-wrap: wrap;
+  }
+
+  .melto-deal-modal-footer button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-special button,
+  .melto-special a {
+    transition: none;
+  }
+}

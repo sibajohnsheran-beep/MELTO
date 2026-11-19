@@ -1,0 +1,874 @@
+
+/* ==========================================
+   MELTO - FLAVOURS COLLECTION
+   ORIGINAL UI/UX DESIGN REFINEMENT
+========================================== */
+
+.melto-collection {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 68px 0 65px;
+
+  background:
+    radial-gradient(
+      ellipse at 80% 8%,
+      rgba(255, 179, 216, 0.55),
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 9% 72%,
+      rgba(255, 207, 227, 0.7),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #fff0f6 0%,
+      #ffe1ee 48%,
+      #fff3f8 100%
+    );
+
+  color: #663022;
+}
+
+/* RESET INSIDE COLLECTION */
+
+.melto-collection *,
+.melto-collection *::before,
+.melto-collection *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   ORIGINAL SOFT PINK WAVE
+========================================== */
+
+.melto-collection::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 16 C140 90 250 6 380 50 S630 30 760 60 S1060 0 1190 47 S1360 80 1440 32 V0 H0 Z' fill='%23ffb3d4' fill-opacity='.65'/%3E%3Cpath d='M0 35 C140 100 250 25 380 68 S630 48 760 75 S1060 23 1190 67 S1360 91 1440 51 V0 H0 Z' fill='%23ffe5f0'/%3E%3C/svg%3E");
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  pointer-events: none;
+}
+
+/* SMALL CANDY DECORATIONS */
+
+.melto-collection::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  inset: 0;
+
+  background-image:
+    radial-gradient(
+      circle,
+      #ff83b3 0 6px,
+      transparent 7px
+    ),
+    radial-gradient(
+      circle,
+      #ffc83e 0 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle,
+      #ffffff 0 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle,
+      #b69aff 0 4px,
+      transparent 5px
+    );
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+
+  background-position:
+    left 98% top 23%,
+    left 3% top 42%,
+    left 96% top 78%,
+    left 6% top 88%;
+
+  background-repeat: no-repeat;
+
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.melto-collection-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 56px, 1220px);
+  margin: 0 auto;
+}
+
+/* ==========================================
+   COMPACT COLLECTION HEADER
+========================================== */
+
+.melto-collection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  min-height: 180px;
+  margin-bottom: 8px;
+}
+
+.melto-collection-heading {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;
+  min-width: 0;
+}
+
+/* PINK EYEBROW LABEL */
+
+.melto-collection-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 15px;
+
+  border: 1px solid #ffb5d0;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    180deg,
+    #ffe3ef,
+    #ffc8df
+  );
+
+  color: #da155e;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+
+  box-shadow:
+    inset 0 2px 4px #ffffffaa,
+    0 3px 8px #bc588522;
+}
+
+/* ==========================================
+   ORIGINAL STYLE TITLE
+========================================== */
+
+.melto-collection-heading h2 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 13px 0 10px;
+
+  color: #781c2a;
+
+  font-family:
+    "Poppins",
+    "Nunito",
+    sans-serif;
+
+  font-size: clamp(30px, 3.2vw, 43px);
+  font-weight: 900;
+  font-style: italic;
+
+  line-height: 1.05;
+  letter-spacing: -1.3px;
+
+  text-shadow:
+    0 2px 0 #fff8fb,
+    0 4px 0 #eab1c650,
+    0 7px 12px #ad507d25;
+}
+
+.melto-collection-heading h2 span {
+  display: block;
+}
+
+/* DESCRIPTION */
+
+.melto-collection-heading p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: #714252;
+
+  font-family:
+    "Nunito",
+    "Poppins",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.6;
+}
+
+/* ==========================================
+   3D ICE CREAM SPLASH
+========================================== */
+
+.melto-collection-header-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 210px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.melto-collection-header-art img {
+  display: block;
+
+  width: 100%;
+  max-height: 175px;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 8px 12px #ac437932
+  );
+}
+
+/* ==========================================
+   ORIGINAL COMPACT FILTER TABS
+========================================== */
+
+.melto-collection-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+  margin: 3px 0 24px;
+}
+
+.melto-collection-filter {
+  min-width: 82px;
+  min-height: 34px;
+
+  padding: 7px 17px;
+
+  border: 1.5px solid #f9bfd3;
+  border-radius: 30px;
+
+  background: #fff8fb;
+  color: #653525;
+
+  font-family:
+    "Nunito",
+    "Poppins",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  box-shadow:
+    0 3px 7px #b45f8515,
+    inset 0 2px 4px #ffffff;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-collection-filter:hover {
+  border-color: #f34d92;
+  background: #ffe9f2;
+}
+
+/* ACTIVE FILTER */
+
+.melto-collection-filter.active {
+  border-color: #ed1370;
+
+  background: linear-gradient(
+    180deg,
+    #ff6aa7 0%,
+    #f31b79 50%,
+    #dd0061 100%
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 0 #ba1458,
+    0 7px 13px #d7287035,
+    inset 0 2px 4px #ffffff65;
+}
+
+.melto-collection-filter:focus-visible {
+  outline: 3px solid #ed1370;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   PRODUCT GRID - 4 + 2
+========================================== */
+
+.melto-collection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 20px 17px;
+}
+
+/* CENTRE LAST TWO OF SIX CARDS */
+
+.melto-collection-grid
+.melto-collection-product:nth-child(5):nth-last-child(2) {
+  grid-column: 2;
+}
+
+/* ==========================================
+   COMPACT PRODUCT CARDS
+========================================== */
+
+.melto-collection-product {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  overflow: hidden;
+
+  border: 2px solid #ffffff;
+  border-radius: 19px;
+
+  background: #fff7fa;
+
+  box-shadow:
+    0 4px 0 #eba9c568,
+    0 9px 18px #b75d8427,
+    inset 0 2px 5px #ffffff;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.melto-collection-product:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 5px 0 #eba9c575,
+    0 14px 21px #b75d8435;
+}
+
+/* ==========================================
+   IMAGE AREA
+========================================== */
+
+.melto-collection-product-visual {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 175px;
+
+  padding: 12px 10px 3px;
+
+  background:
+    radial-gradient(
+      ellipse at 48% 70%,
+      #ffffff95 0%,
+      transparent 72%
+    ),
+    var(--card-tint, #ffe1ed);
+}
+
+/* 3D ICE CREAM IMAGE */
+
+.melto-collection-product-image {
+  display: block;
+
+  width: 100%;
+  max-width: 165px;
+  height: 159px;
+
+  object-fit: contain;
+  image-rendering: auto;
+
+  filter: drop-shadow(
+    0 6px 5px #8d466027
+  );
+
+  transition: transform 0.25s ease;
+}
+
+.melto-collection-product:hover
+.melto-collection-product-image {
+  transform: translateY(-3px) scale(1.035);
+}
+
+/* ==========================================
+   HEART ICON
+========================================== */
+
+.melto-collection-heart {
+  position: absolute;
+  z-index: 4;
+
+  top: 9px;
+  right: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #fff9fce8;
+  color: #ee116d;
+
+  box-shadow: 0 2px 6px #b8587d15;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-collection-heart svg {
+  width: 19px;
+  height: 19px;
+}
+
+.melto-collection-heart:hover {
+  transform: scale(1.08);
+  background: #ffffff;
+}
+
+.melto-collection-heart.active {
+  background: #ffe0ed;
+  color: #e00063;
+}
+
+/* ==========================================
+   COMPACT PRODUCT DETAILS
+========================================== */
+
+.melto-collection-product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1;
+
+  padding: 11px 10px 15px;
+
+  background: linear-gradient(
+    180deg,
+    #fff2f7 0%,
+    #fffafd 100%
+  );
+
+  text-align: center;
+}
+
+.melto-collection-product-details h3 {
+  margin: 0 0 5px;
+
+  color: #3b1e20;
+
+  font-family:
+    "Nunito",
+    "Poppins",
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+/* PRICE */
+
+.melto-collection-product-details p {
+  margin: 0 0 12px;
+
+  color: #3b1e20;
+
+  font-family:
+    "Nunito",
+    "Poppins",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ==========================================
+   SMALL GLOSSY ADD TO CART
+========================================== */
+
+.melto-collection-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  width: min(100%, 135px);
+  min-height: 34px;
+
+  margin-top: auto;
+  padding: 8px 12px;
+
+  border: 1px solid #ff91b9;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    180deg,
+    #ff62a0 0%,
+    #f11a78 55%,
+    #d7005e 100%
+  );
+
+  color: white;
+
+  font-family:
+    "Nunito",
+    "Poppins",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  box-shadow:
+    0 3px 0 #b81255,
+    0 7px 12px #c328712c,
+    inset 0 2px 4px #ffffff66;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-collection-add-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.melto-collection-add-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* KEYBOARD FOCUS */
+
+.melto-collection-heart:focus-visible,
+.melto-collection-add-btn:focus-visible {
+  outline: 3px solid #ed1370;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   EMPTY CATEGORY
+========================================== */
+
+.melto-collection-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+
+  background: #fff9fc;
+  text-align: center;
+}
+
+.melto-collection-empty h3 {
+  margin: 0 0 8px;
+  color: #663022;
+  font-size: 18px;
+}
+
+.melto-collection-empty p {
+  margin: 0 0 18px;
+  color: #967382;
+  font-size: 12px;
+}
+
+.melto-collection-empty button {
+  padding: 10px 19px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #ed1170;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ==========================================
+   MEDIUM DESKTOP
+========================================== */
+
+@media (max-width: 1100px) {
+  .melto-collection-container {
+    width: min(100% - 40px, 1000px);
+  }
+
+  .melto-collection-grid {
+    gap: 14px;
+  }
+
+  .melto-collection-product-visual {
+    height: 160px;
+  }
+
+  .melto-collection-product-image {
+    max-width: 148px;
+    height: 147px;
+  }
+
+  .melto-collection-heading h2 {
+    font-size: clamp(29px, 3.7vw, 39px);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 850px) {
+  .melto-collection-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .melto-collection-grid
+  .melto-collection-product:nth-child(5):nth-last-child(2) {
+    grid-column: auto;
+  }
+
+  .melto-collection-header-art {
+    width: 170px;
+    height: 160px;
+  }
+
+  .melto-collection-header-art img {
+    max-height: 155px;
+  }
+
+  .melto-collection-product-visual {
+    height: 185px;
+  }
+
+  .melto-collection-product-image {
+    max-width: 165px;
+    height: 169px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .melto-collection {
+    padding: 50px 0 55px;
+  }
+
+  .melto-collection-container {
+    width: calc(100% - 26px);
+  }
+
+  .melto-collection-header {
+    min-height: 0;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .melto-collection-heading h2 {
+    margin: 10px 0 8px;
+
+    font-size: clamp(23px, 5.7vw, 34px);
+    letter-spacing: -0.7px;
+  }
+
+  .melto-collection-heading p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .melto-collection-eyebrow {
+    padding: 6px 11px;
+    font-size: 9px;
+  }
+
+  .melto-collection-header-art {
+    width: 33%;
+    min-width: 85px;
+    height: 120px;
+  }
+
+  .melto-collection-header-art img {
+    max-height: 110px;
+  }
+
+  /* FILTERS */
+
+  .melto-collection-filters {
+    gap: 7px;
+    margin-bottom: 19px;
+  }
+
+  .melto-collection-filter {
+    min-width: 68px;
+    min-height: 32px;
+
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  /* GRID */
+
+  .melto-collection-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .melto-collection-product {
+    border-radius: 16px;
+  }
+
+  .melto-collection-product-visual {
+    height: 142px;
+    padding: 6px;
+  }
+
+  .melto-collection-product-image {
+    max-width: 133px;
+    height: 129px;
+  }
+
+  .melto-collection-heart {
+    top: 6px;
+    right: 6px;
+
+    width: 28px;
+    height: 28px;
+  }
+
+  .melto-collection-heart svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .melto-collection-product-details {
+    padding: 10px 6px 13px;
+  }
+
+  .melto-collection-product-details h3 {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .melto-collection-product-details p {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .melto-collection-add-btn {
+    width: min(100%, 125px);
+    min-height: 31px;
+
+    padding: 7px 6px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .melto-collection-add-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .melto-collection-heading h2 {
+    font-size: 22px;
+  }
+
+  .melto-collection-header-art {
+    min-width: 72px;
+  }
+
+  .melto-collection-product-visual {
+    height: 125px;
+  }
+
+  .melto-collection-product-image {
+    height: 115px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-collection-product,
+  .melto-collection-product-image,
+  .melto-collection-filter,
+  .melto-collection-heart,
+  .melto-collection-add-btn {
+    transition: none;
+  }
+
+  .melto-collection-product:hover,
+  .melto-collection-product:hover
+  .melto-collection-product-image,
+  .melto-collection-add-btn:hover {
+    transform: none;
+  }
+}

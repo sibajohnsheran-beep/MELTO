@@ -1,0 +1,906 @@
+
+/* ========================================
+   MELTO - CHECKOUT PAGE
+======================================== */
+
+.melto-checkout-page {
+  min-height: 100vh;
+  color: #653525;
+  background:
+    radial-gradient(circle at 0% 20%, #ffe0ed, transparent 35%),
+    radial-gradient(circle at 100% 50%, #e7dcff, transparent 35%),
+    #fff7fa;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.melto-checkout-header {
+  background: #fffafd;
+  border-bottom: 1px solid #f6d9e6;
+}
+
+.melto-checkout-header-inner {
+  max-width: 1280px;
+  min-height: 90px;
+  margin: 0 auto;
+  padding: 8px 5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.melto-checkout-logo {
+  width: 80px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.melto-checkout-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  color: #d92971;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.melto-checkout-secure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #996e83;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ========================================
+   MAIN LAYOUT
+======================================== */
+
+.melto-checkout-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 65px 5% 100px;
+}
+
+.melto-checkout-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.melto-checkout-heading > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e91e72;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.melto-checkout-heading h1 {
+  margin: 14px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(39px, 5vw, 65px);
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.melto-checkout-heading h1 em {
+  color: #e91e72;
+  font-style: normal;
+}
+
+.melto-checkout-heading p {
+  color: #977186;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.melto-checkout-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(320px, 0.8fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.melto-checkout-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ========================================
+   CHECKOUT CARDS
+======================================== */
+
+.melto-checkout-card,
+.melto-checkout-summary {
+  padding: 30px;
+  border: 1px solid #f4dae6;
+  border-radius: 28px;
+  background: #fffdfd;
+  box-shadow: 0 12px 36px #b86f8e17;
+}
+
+.melto-checkout-card-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 26px;
+}
+
+.melto-checkout-step {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #ffe2ee;
+  color: #e91e72;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.melto-checkout-card-title h2,
+.melto-checkout-summary-title h2 {
+  margin: 0 0 5px;
+  color: #653525;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.melto-checkout-card-title p,
+.melto-checkout-summary-title p {
+  margin: 0;
+  color: #a17b8e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   DELIVERY / PICKUP OPTIONS
+======================================== */
+
+.melto-checkout-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.melto-checkout-method {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  padding: 24px 12px;
+
+  border: 2px solid #f6dfe9;
+  border-radius: 22px;
+  background: #fff8fb;
+
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-checkout-method input {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  accent-color: #e91e72;
+}
+
+.melto-checkout-method > svg:not(.melto-method-check) {
+  color: #d92971;
+}
+
+.melto-checkout-method strong {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.melto-checkout-method small {
+  color: #9e798b;
+  font-size: 12px;
+}
+
+.melto-checkout-method > span {
+  color: #d92971;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.melto-checkout-method.active {
+  border-color: #e91e72;
+  background: #ffebf3;
+}
+
+.melto-method-check {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  color: #e91e72;
+}
+
+/* ========================================
+   CUSTOMER INPUT FIELDS
+======================================== */
+
+.melto-checkout-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.melto-checkout-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.melto-checkout-field.full {
+  grid-column: 1 / -1;
+}
+
+.melto-checkout-field label {
+  color: #653525;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.melto-checkout-field input,
+.melto-checkout-field textarea {
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 15px;
+
+  border: 1px solid #f2d5e1;
+  border-radius: 13px;
+  outline: none;
+
+  background: #fff9fb;
+  color: #653525;
+  font: inherit;
+  font-size: 14px;
+}
+
+.melto-checkout-field textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.melto-checkout-field input:focus,
+.melto-checkout-field textarea:focus {
+  border-color: #e91e72;
+  box-shadow: 0 0 0 3px #ffdbeb;
+}
+
+.melto-checkout-field input::placeholder,
+.melto-checkout-field textarea::placeholder {
+  color: #bea0af;
+}
+
+.melto-checkout-notes {
+  margin-top: 22px;
+}
+
+.melto-checkout-info {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin: 0;
+  color: #a37b8b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.melto-checkout-info svg {
+  flex-shrink: 0;
+  color: #e91e72;
+}
+
+/* ========================================
+   SHOP PICKUP INFO
+======================================== */
+
+.melto-checkout-pickup-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 19px;
+  border: 1px solid #f7d5e3;
+  border-radius: 17px;
+  background: #fff0f6;
+}
+
+.melto-checkout-pickup-note > svg {
+  flex-shrink: 0;
+  color: #e91e72;
+}
+
+.melto-checkout-pickup-note strong {
+  font-size: 14px;
+  color: #653525;
+}
+
+.melto-checkout-pickup-note p {
+  margin: 8px 0 0;
+  color: #997587;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   PAYMENT METHODS - UPDATED
+======================================== */
+
+.melto-checkout-payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* PAYMENT OPTION CARD */
+
+.melto-checkout-payment-option {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  min-height: 110px;
+  padding: 22px;
+
+  border: 2px solid #f6dfe9;
+  border-radius: 20px;
+  background: #fff8fb;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* HIDE NATIVE RADIO VISUALLY, KEEP ACCESSIBLE */
+
+.melto-checkout-payment-option > input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* PAYMENT ICON */
+
+.melto-checkout-payment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 53px;
+  height: 53px;
+  flex-shrink: 0;
+
+  border-radius: 16px;
+  background: #ffe2ed;
+  color: #e91e72;
+}
+
+/* PAYMENT DETAILS */
+
+.melto-checkout-payment-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.melto-checkout-payment-info strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #653525;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.melto-checkout-payment-info p {
+  margin: 0;
+
+  color: #9f7e8d;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* SELECTED CHECK ICON */
+
+.melto-checkout-payment-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+
+  color: #e91e72;
+}
+
+/* SELECTED / HOVER EFFECT */
+
+.melto-checkout-payment-option.active {
+  border-color: #f05295;
+  background: #fff0f6;
+  box-shadow: 0 7px 20px #e91e7215;
+}
+
+.melto-checkout-payment-option:hover {
+  border-color: #f6a5c5;
+}
+
+.melto-checkout-payment-option:focus-within {
+  outline: 3px solid #f8a9cb;
+  outline-offset: 3px;
+}
+
+/* CARD BRAND LABELS */
+
+.melto-checkout-card-brands {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 13px;
+}
+
+.melto-checkout-card-brands span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 25px;
+  padding: 5px 10px;
+
+  border: 1px solid #e9d4e1;
+  border-radius: 6px;
+  background: #ffffff;
+
+  color: #81586b;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* CARD PAYMENT NOTICE */
+
+.melto-checkout-card-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-top: 18px;
+  padding: 19px;
+
+  border: 1px solid #efd2e1;
+  border-radius: 17px;
+  background: #fff0f8;
+}
+
+.melto-checkout-card-notice > svg {
+  flex-shrink: 0;
+  color: #e91e72;
+}
+
+.melto-checkout-card-notice strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #653525;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.melto-checkout-card-notice p {
+  margin: 0;
+
+  color: #9c7186;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* PAYMENT DEMO DISCLAIMER */
+
+.melto-checkout-payment-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-top: 20px;
+
+  color: #a27d8e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.melto-checkout-payment-disclaimer svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #d92971;
+}
+
+/* ========================================
+   ORDER SUMMARY
+======================================== */
+
+.melto-checkout-summary {
+  position: sticky;
+  top: 20px;
+}
+
+.melto-checkout-summary-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.melto-checkout-summary-title > svg {
+  color: #e91e72;
+}
+
+.melto-checkout-summary-items {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.melto-checkout-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 14px 0;
+  border-bottom: 1px solid #f6e4eb;
+}
+
+.melto-checkout-summary-item img {
+  width: 74px;
+  height: 74px;
+  flex-shrink: 0;
+
+  padding: 5px;
+  border-radius: 13px;
+  object-fit: contain;
+
+  background: #ffe8f1;
+}
+
+.melto-checkout-summary-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.melto-checkout-summary-item strong {
+  color: #653525;
+  font-size: 13px;
+}
+
+.melto-checkout-summary-item small {
+  color: #a48292;
+  font-size: 11px;
+}
+
+.melto-checkout-summary-item span {
+  color: #e91e72;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ========================================
+   TOTAL CALCULATION
+======================================== */
+
+.melto-checkout-calculation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin: 25px 0;
+}
+
+.melto-checkout-calculation > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  color: #947080;
+  font-size: 14px;
+}
+
+.melto-checkout-calculation strong {
+  color: #653525;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.melto-checkout-calculation .melto-checkout-grand-total {
+  align-items: center;
+
+  padding-top: 20px;
+  border-top: 1px solid #f5dce5;
+
+  color: #653525;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.melto-checkout-grand-total strong {
+  color: #e91e72;
+  font-size: 23px;
+}
+
+/* ========================================
+   SELECTED PAYMENT IN ORDER SUMMARY
+======================================== */
+
+.melto-checkout-summary-payment {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 22px;
+  padding: 15px;
+
+  border: 1px solid #f4d9e4;
+  border-radius: 15px;
+  background: #fff3f8;
+}
+
+.melto-checkout-summary-payment > svg {
+  flex-shrink: 0;
+  color: #e91e72;
+}
+
+.melto-checkout-summary-payment > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.melto-checkout-summary-payment small {
+  color: #a17d8e;
+  font-size: 11px;
+}
+
+.melto-checkout-summary-payment strong {
+  color: #653525;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.melto-checkout-submit,
+.melto-checkout-empty button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 54px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 40px;
+
+  color: white;
+  background: linear-gradient(
+    180deg,
+    #ff559a,
+    #e40f69
+  );
+
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.melto-checkout-submit:hover,
+.melto-checkout-empty button:hover {
+  transform: translateY(-2px);
+}
+
+.melto-checkout-disclaimer {
+  margin: 17px 0 0;
+
+  color: #a58395;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ========================================
+   EMPTY CART
+======================================== */
+
+.melto-checkout-empty {
+  max-width: 470px;
+  margin: 0 auto;
+  padding: 45px 30px;
+
+  border-radius: 27px;
+  background: white;
+  text-align: center;
+}
+
+.melto-checkout-empty > svg {
+  color: #e91e72;
+}
+
+.melto-checkout-empty h2 {
+  color: #653525;
+}
+
+.melto-checkout-empty p {
+  color: #947080;
+  margin-bottom: 25px;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 950px) {
+  .melto-checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .melto-checkout-summary {
+    position: static;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+  .melto-checkout-header-inner {
+    min-height: 75px;
+  }
+
+  .melto-checkout-logo {
+    width: 62px;
+    height: 58px;
+  }
+
+  .melto-checkout-back,
+  .melto-checkout-secure {
+    font-size: 11px;
+  }
+
+  .melto-checkout-main {
+    padding: 40px 4% 65px;
+  }
+
+  .melto-checkout-heading {
+    margin-bottom: 30px;
+  }
+
+  .melto-checkout-card,
+  .melto-checkout-summary {
+    padding: 21px 17px;
+    border-radius: 22px;
+  }
+
+  .melto-checkout-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .melto-checkout-methods {
+    gap: 8px;
+  }
+
+  .melto-checkout-method {
+    padding: 22px 7px;
+  }
+
+  .melto-checkout-method strong {
+    font-size: 12px;
+  }
+
+  .melto-checkout-card-title h2 {
+    font-size: 17px;
+  }
+
+  .melto-checkout-secure {
+    display: none;
+  }
+
+  /* PAYMENT CARDS */
+
+  .melto-checkout-payment-option {
+    gap: 12px;
+    min-height: 100px;
+    padding: 17px 13px;
+    border-radius: 17px;
+  }
+
+  .melto-checkout-payment-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+  }
+
+  .melto-checkout-payment-info strong {
+    font-size: 13px;
+  }
+
+  .melto-checkout-payment-info p {
+    font-size: 11px;
+  }
+
+  .melto-checkout-card-brands span {
+    font-size: 10px;
+  }
+
+  .melto-checkout-card-notice {
+    padding: 14px;
+  }
+
+  .melto-checkout-summary-payment {
+    padding: 13px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .melto-checkout-submit,
+  .melto-checkout-empty button,
+  .melto-checkout-method,
+  .melto-checkout-payment-option {
+    transition: none;
+  }
+
+  .melto-checkout-submit:hover,
+  .melto-checkout-empty button:hover {
+    transform: none;
+  }
+}
