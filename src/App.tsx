@@ -98,12 +98,16 @@ function ScrollHandler() {
           attempts += 1;
 
           animationFrame =
-            requestAnimationFrame(scrollToSection);
+            requestAnimationFrame(
+              scrollToSection
+            );
         }
       };
 
       animationFrame =
-        requestAnimationFrame(scrollToSection);
+        requestAnimationFrame(
+          scrollToSection
+        );
     } else {
       window.scrollTo(0, 0);
     }
@@ -131,7 +135,9 @@ function MeltoAppContent() {
     useState<AppScreen>("shop");
 
   /* ========================================
-     ADMIN STATE
+     ADMIN DEMO STATE
+
+     WORKS ON LOCALHOST AND VERCEL
   ======================================== */
 
   const [adminOpen, setAdminOpen] =
@@ -166,7 +172,8 @@ function MeltoAppContent() {
   const handleAddToCart = (product: Product) => {
     setCartItems((previous) => {
       const existing = previous.find(
-        (item) => item.product.id === product.id
+        (item) =>
+          item.product.id === product.id
       );
 
       if (existing) {
@@ -224,7 +231,8 @@ function MeltoAppContent() {
   ) => {
     setCartItems((previous) =>
       previous.filter(
-        (item) => item.product.id !== productId
+        (item) =>
+          item.product.id !== productId
       )
     );
   };
@@ -234,13 +242,14 @@ function MeltoAppContent() {
   ======================================== */
 
   const cartCount = cartItems.reduce(
-    (total, item) => total + item.quantity,
+    (total, item) =>
+      total + item.quantity,
     0
   );
 
   /* ========================================
      OPEN CHECKOUT
-     WORKS FROM HOME AND FLAVOURS PAGE
+     WORKS FROM HOME AND FLAVOURS
   ======================================== */
 
   const handleOpenCheckout = () => {
@@ -251,8 +260,6 @@ function MeltoAppContent() {
     setCartOpen(false);
     setScreen("checkout");
 
-    // Checkout is rendered on the home route.
-    // Important when coming from /flavours.
     navigate("/");
 
     window.scrollTo(0, 0);
@@ -302,16 +309,14 @@ function MeltoAppContent() {
   };
 
   /* ========================================
-     ADMIN LOGIN
+     ADMIN LOGIN SUCCESS
+
+     NO DEVELOPMENT-ONLY RESTRICTION
   ======================================== */
 
   const handleAdminLoginSuccess = () => {
-    // Preserve existing development-only login.
-    if (!import.meta.env.DEV) {
-      return;
-    }
-
     setDemoAdminLoggedIn(true);
+
     setAdminOpen(false);
     setCartOpen(false);
     setScreen("shop");
@@ -327,6 +332,7 @@ function MeltoAppContent() {
 
   const handleAdminLogout = () => {
     setDemoAdminLoggedIn(false);
+
     setAdminOpen(false);
     setCartOpen(false);
     setScreen("shop");
@@ -341,7 +347,7 @@ function MeltoAppContent() {
   /* ========================================
      SHARED NAVBAR
 
-     SAME NAVBAR ON:
+     SAME NAVBAR FOR:
      - HOMEPAGE
      - FLAVOURS PAGE
   ======================================== */
@@ -406,7 +412,7 @@ function MeltoAppContent() {
       <Routes>
 
         {/* =================================
-            HOMEPAGE
+            CUSTOMER HOMEPAGE
         ================================= */}
 
         <Route
@@ -420,11 +426,11 @@ function MeltoAppContent() {
 
                   {customerNavbar}
 
-                  {/* HERO + FLAVOUR SELECTOR */}
+                  {/* HERO */}
 
                   <Hero />
 
-                  {/* ALL SIX SIGNATURE PRODUCTS */}
+                  {/* SIX SIGNATURE PRODUCTS */}
 
                   <SignaturePicks
                     onAddToCart={
@@ -432,11 +438,11 @@ function MeltoAppContent() {
                     }
                   />
 
-                  {/* APPROVED HOMEPAGE BANNERS */}
+                  {/* HOMEPAGE PROMOTIONS */}
 
                   <HomepagePromos />
 
-                  {/* INTERACTIVE 3D CUSTOMIZER */}
+                  {/* 3D ICE CREAM CUSTOMIZER */}
 
                   <div
                     id="melto-customizer-section"
@@ -472,7 +478,7 @@ function MeltoAppContent() {
 
                   <Footer />
 
-                  {/* CART + ADMIN LOGIN */}
+                  {/* CART AND ADMIN LOGIN */}
 
                   {customerOverlays}
                 </>
@@ -513,7 +519,7 @@ function MeltoAppContent() {
         />
 
         {/* =================================
-            NEW FLAVOURS COLLECTION PAGE
+            FLAVOURS COLLECTION PAGE
         ================================= */}
 
         <Route
@@ -525,7 +531,7 @@ function MeltoAppContent() {
 
               {customerNavbar}
 
-              {/* ALL SIX ICE CREAM PRODUCTS */}
+              {/* ALL SIX PRODUCTS */}
 
               <FlavoursPage
                 onAddToCart={
@@ -537,7 +543,7 @@ function MeltoAppContent() {
 
               <Footer />
 
-              {/* SAME CART + ADMIN LOGIN */}
+              {/* SAME CART AND ADMIN LOGIN */}
 
               {customerOverlays}
 
@@ -547,12 +553,14 @@ function MeltoAppContent() {
 
         {/* =================================
             ADMIN DASHBOARD
+
+            DEMO ACCESS ENABLED IN
+            BOTH DEVELOPMENT AND PRODUCTION
         ================================= */}
 
         <Route
           path="/admin"
           element={
-            import.meta.env.DEV &&
             demoAdminLoggedIn ? (
               <AdminLayout
                 onBackToShop={
@@ -569,7 +577,7 @@ function MeltoAppContent() {
         />
 
         {/* =================================
-            UNKNOWN ROUTE
+            UNKNOWN ROUTES
         ================================= */}
 
         <Route

@@ -18,7 +18,11 @@ import {
 import "./AdminLogin.css";
 
 /* ========================================
-   MELTO - DEVELOPMENT LOGIN CREDENTIALS
+   MELTO - DEMO PREVIEW CREDENTIALS
+
+   IMPORTANT:
+   PUBLIC DEMO ONLY.
+   NOT REAL ADMIN SECURITY.
 ======================================== */
 
 const DEMO_EMAIL = "sheran@gmail.com";
@@ -50,8 +54,6 @@ function AdminLogin({
     useState(false);
 
   const [error, setError] = useState("");
-
-  const demoEnabled = import.meta.env.DEV;
 
   /* ========================================
      MODAL HANDLING
@@ -87,20 +89,15 @@ function AdminLogin({
   }, [isOpen, onClose]);
 
   /* ========================================
-     LOGIN VALIDATION
+     DEMO LOGIN VALIDATION
+
+     ENABLED ON LOCALHOST AND VERCEL
   ======================================== */
 
   const handleLogin = (
     event: FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
-
-    if (!demoEnabled) {
-      setError(
-        "Staff authentication is unavailable until backend integration."
-      );
-      return;
-    }
 
     const validEmail =
       email.trim().toLowerCase() === DEMO_EMAIL;
@@ -113,13 +110,14 @@ function AdminLogin({
       return;
     }
 
-    // LOGIN SUCCESS
+    /* LOGIN SUCCESS */
 
     setError("");
     setEmail("");
     setPassword("");
+    setShowPassword(false);
 
-    // OPEN ADMIN DASHBOARD
+    /* OPEN EXISTING ADMIN DASHBOARD */
 
     onLoginSuccess();
   };
@@ -141,7 +139,6 @@ function AdminLogin({
         aria-modal="true"
         aria-labelledby="melto-admin-login-title"
       >
-
         {/* CLOSE BUTTON */}
 
         <button
@@ -156,7 +153,6 @@ function AdminLogin({
         {/* HEADER */}
 
         <div className="melto-admin-login-header">
-
           <div className="melto-admin-login-icon">
             <ShieldCheck size={31} />
           </div>
@@ -168,23 +164,19 @@ function AdminLogin({
           <p>
             Login to MELTO Admin Dashboard
           </p>
-
         </div>
 
         {/* LOGIN FORM */}
 
         <form onSubmit={handleLogin}>
-
           {/* EMAIL */}
 
           <div className="melto-admin-login-field">
-
             <label htmlFor="melto-admin-email">
               Email Address
             </label>
 
             <div className="melto-admin-login-input-wrap">
-
               <Mail size={19} />
 
               <input
@@ -200,21 +192,17 @@ function AdminLogin({
                 required
                 autoFocus
               />
-
             </div>
-
           </div>
 
           {/* PASSWORD */}
 
           <div className="melto-admin-login-field">
-
             <label htmlFor="melto-admin-password">
               Password
             </label>
 
             <div className="melto-admin-login-input-wrap">
-
               <LockKeyhole size={19} />
 
               <input
@@ -238,7 +226,9 @@ function AdminLogin({
                 type="button"
                 className="melto-admin-login-eye"
                 onClick={() =>
-                  setShowPassword((current) => !current)
+                  setShowPassword(
+                    (current) => !current
+                  )
                 }
                 aria-label={
                   showPassword
@@ -252,9 +242,7 @@ function AdminLogin({
                   <Eye size={19} />
                 )}
               </button>
-
             </div>
-
           </div>
 
           {/* ERROR MESSAGE */}
@@ -273,44 +261,29 @@ function AdminLogin({
           <button
             type="submit"
             className="melto-admin-login-submit"
-            disabled={!demoEnabled}
           >
-            {demoEnabled
-              ? "Login to Dashboard"
-              : "Staff Login Unavailable"}
-
+            Login to Dashboard
             <ArrowRight size={19} />
           </button>
-
         </form>
 
-        {/* DEVELOPMENT NOTICE */}
+        {/* DEMO PREVIEW NOTICE */}
 
-        {demoEnabled ? (
-          <div className="melto-admin-login-demo">
+        <div className="melto-admin-login-demo">
+          <strong>
+            MELTO Demo Preview
+          </strong>
 
-            <strong>
-              Development Login
-            </strong>
-
-            <p>
-              Use your configured demo credentials
-              to access the admin dashboard.
-            </p>
-
-            <small>
-              Local testing only. Secure backend
-              authentication will be added later.
-            </small>
-
-          </div>
-        ) : (
-          <p className="melto-admin-login-unavailable">
-            Staff login will be enabled after
-            backend authentication is connected.
+          <p>
+            Use the configured demo credentials
+            to preview the admin dashboard.
           </p>
-        )}
 
+          <small>
+            This is a public demonstration only.
+            Real staff authentication is not enabled.
+          </small>
+        </div>
       </div>
     </div>
   );
